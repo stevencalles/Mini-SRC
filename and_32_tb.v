@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 module and_32_tb;
 
-	reg Clock, Clear, PCout, Zlowout, MDRout, R2out, R3out, Zhighout;
+	reg clock, clear, PCout, Zlowout, MDRout, R2out, R3out, Zhighout;
 	reg MARin, Zin, PCin, MDRin, IRin, Yin;
 	reg LOout, HIin, LOin, HIout;
 	reg IncPC, Read, AND, R1in, R2in, R3in;
@@ -15,17 +15,18 @@ module and_32_tb;
 								
 	reg [3:0] Present_state = Default;
 	
-	Datapath DUT(PCout, Zhighout, Zlowout, MDRout, R2out, R3out, MARin, Zin, PCin, MDRin, IRin, Yin, IncPC, Read, AND, R1in,
-	R2in, R3in, Clock, Clear, Mdatain);
+	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .R2out(R2out), .R3out(R3out), 
+	.MARin(MARin), .Zin(Zin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), .AND(AND), .R1in(R1in),
+	.R2in(R2in), .R3in(R3in), .clock(clock), .clear(clear), .Mdatain(Mdatain));
 	
 	initial
 		begin
-			Clock = 0;
+			clock = 0;
 			flag = 0;
-			forever #10 Clock = ~Clock;
+			forever #10 clock = ~clock;
 		end
 	
-	always @(posedge Clock)
+	always @(posedge clock)
 		begin 
 			if (flag == 1) begin
 			case(Present_state)
@@ -52,7 +53,7 @@ module and_32_tb;
 			case(Present_state)
 				Default: begin
 					PCout <= 0; Zlowout <= 0; Zhighout <= 0; MDRout <= 0; HIout <= 0; LOout <= 0;
-					Clear <= 0;
+					clear <= 0;
 					R2out <= 0; R3out <= 0; MARin <= 0; Zin <= 0; AND <= 0;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0; HIin <= 0; LOin <= 0;
 					IncPC <= 0; Read <= 0; opcode <= 5'b00000;
