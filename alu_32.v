@@ -16,9 +16,9 @@ module alu_32(input InPC, input [31:0] A, B, input [4:0] opcode, output reg[31:0
 	assign Not_out = ~A;
 	
 	// different ALU operations
-	adder	adder(.A(A), .B(B), .Add_out(Result));
-	subtracter subtracter(.A(A), .B(B), .Sub_out(Difference));
-	and_32 and_32(.A(A), .B(B), .And_out(z));
+//	adder	adder(.A(A), .B(B), .Result(Add_out));
+//	subtracter subtracter(.A(A), .B(B), .Difference(Sub_out));
+	and_32 and_32(.A(A), .B(B), .z(And_out));
 
 	always @ (*) begin
 	//	case (InPC)

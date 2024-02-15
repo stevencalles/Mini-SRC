@@ -13,6 +13,7 @@ module Datapath(
 );
 
 wire [31:0] BusMuxOut, BusMuxIn;
+wire [4:0] encoder_out;
 
 wire [31:0] BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2,
 BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7,
@@ -51,7 +52,7 @@ registerMDR MDR(clock, clear, MDRin, Read, BusMuxOut, Mdatain, BusMuxIn_MDR);
 
 //adder add(A, BusMuxOut, Zregin);
 
-alu_32 alu_32(IncPC, BusMuxOut, opcode, ZHighout, ZLowout, PCout);
+alu_32 alu_32(IncPC, BusMuxOut_Y, BusMuxOut, opcode, Zhighout, Zlowout, PCout);
 
 Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMuxIn_R2), .BusMuxIn_R3(BusMuxIn_R3), 
 .BusMuxIn_R4(BusMuxIn_R4), .BusMuxIn_R5(BusMuxIn_R5), .BusMuxIn_R6(BusMuxIn_R6), 
@@ -59,6 +60,6 @@ Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMu
 .BusMuxIn_R11(BusMuxIn_R11), .BusMuxIn_R12(BusMuxIn_R12), .BusMuxIn_R13(BusMuxIn_R13), 
 .BusMuxIn_R14(BusMuxIn_R14), .BusMuxIn_R15(BusMuxIn_R15), .BusMuxIn_HI(BusMuxIn_HI), .BusMuxIn_LO(BusMuxIn_LO), .BusMuxIn_Zhigh(BusMuxIn_Zhigh), 
 .BusMuxIn_Zlow(BusMuxIn_Zlow), .BusMuxIn_PC(BusMuxIn_PC), 
-.BusMuxIn_MDR(BusMuxIn_MDR), .BusMuxIn_InPort(BusMuxIn_InPort), .C_sign_extended(C_sign_extended), .select_sig(opcode), .BusMuxOut(BusMuxOut));
+.BusMuxIn_MDR(BusMuxIn_MDR), .BusMuxIn_InPort(BusMuxIn_InPort), .C_sign_extended(C_sign_extended), .select_sig(encoder_out), .BusMuxOut(BusMuxOut));
 
 endmodule
