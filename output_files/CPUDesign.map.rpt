@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Thu Feb 15 11:19:36 2024
+Mon Feb 26 19:44:46 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  5. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
+  6. Port Connectivity Checks: "register:MAR"
+  7. Port Connectivity Checks: "register:Y"
+  8. Analysis & Elaboration Messages
+  9. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -37,7 +40,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Feb 15 11:19:36 2024           ;
+; Analysis & Elaboration Status ; Successful - Mon Feb 26 19:44:46 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -155,13 +158,42 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++-------------------------------------------------------+
+; Port Connectivity Checks: "encoder_32_5:encoder_32_5" ;
++------------+-------+----------+-----------------------+
+; Port       ; Type  ; Severity ; Details               ;
++------------+-------+----------+-----------------------+
+; in[31..22] ; Input ; Info     ; Stuck at GND          ;
+; in[17..4]  ; Input ; Info     ; Stuck at GND          ;
+; in[1..0]   ; Input ; Info     ; Stuck at GND          ;
++------------+-------+----------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:MAR"                                                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:Y"                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; BusMuxIn ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Feb 15 11:19:29 2024
+    Info: Processing started: Mon Feb 26 19:44:39 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -173,7 +205,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder.v
     Info (12023): Found entity 1: adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file register.v
     Info (12023): Found entity 1: register File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 1
-    Info (12023): Found entity 2: registerMDR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 19
+    Info (12023): Found entity 2: registerMDR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 20
 Info (12021): Found 1 design units, including 1 entities, in source file subtracter.v
     Info (12023): Found entity 1: subtracter File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/subtracter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file and_32_tb.v
@@ -184,56 +216,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_32.
     Info (12023): Found entity 1: alu_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_32_to_1.v
     Info (12023): Found entity 1: Bus File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file encoder_32_to_5.v
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(46): created implicit net for "HIin" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 46
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(47): created implicit net for "LOin" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 47
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(48): created implicit net for "Zhighin" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 48
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(49): created implicit net for "Zlowin" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 49
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(63): created implicit net for "C_sign_extended" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 63
+Info (12021): Found 1 design units, including 1 entities, in source file encoder_32_to_5.v
+    Info (12023): Found entity 1: encoder_32_5 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rol.v
+    Info (12023): Found entity 1: ROL File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ROL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ror.v
+    Info (12023): Found entity 1: ROR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ROR.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shl.v
+    Info (12023): Found entity 1: SHL File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file switch_to_neg.v
+    Info (12023): Found entity 1: SWITCH_TO_NEG File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shr.v
+    Info (12023): Found entity 1: SHR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file shra.v
+    Info (12023): Found entity 1: SHRA File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v Line: 1
+Warning (12019): Can't analyze file -- file OR.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file or_32.v
+    Info (12023): Found entity 1: or_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at subtracter.v(12): created implicit net for "Result" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/subtracter.v Line: 12
-Error (10161): Verilog HDL error at mux_32_to_1.v(34): object "select_sig" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 34
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(35): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 35
-Error (10231): Verilog HDL error at mux_32_to_1.v(35): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 35
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(36): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 36
-Error (10231): Verilog HDL error at mux_32_to_1.v(36): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 36
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(37): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 37
-Error (10231): Verilog HDL error at mux_32_to_1.v(37): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 37
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(38): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 38
-Error (10231): Verilog HDL error at mux_32_to_1.v(38): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 38
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(39): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 39
-Error (10231): Verilog HDL error at mux_32_to_1.v(39): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 39
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(40): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 40
-Error (10231): Verilog HDL error at mux_32_to_1.v(40): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 40
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(41): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 41
-Error (10231): Verilog HDL error at mux_32_to_1.v(41): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 41
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(42): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 42
-Error (10231): Verilog HDL error at mux_32_to_1.v(42): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 42
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(43): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 43
-Error (10231): Verilog HDL error at mux_32_to_1.v(43): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 43
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(44): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 44
-Error (10231): Verilog HDL error at mux_32_to_1.v(44): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 44
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(45): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 45
-Error (10231): Verilog HDL error at mux_32_to_1.v(45): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 45
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(46): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 46
-Error (10231): Verilog HDL error at mux_32_to_1.v(46): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 46
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(47): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 47
-Error (10231): Verilog HDL error at mux_32_to_1.v(47): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 47
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(48): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 48
-Error (10231): Verilog HDL error at mux_32_to_1.v(48): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 48
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(49): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 49
-Error (10231): Verilog HDL error at mux_32_to_1.v(49): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 49
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(50): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 50
-Error (10231): Verilog HDL error at mux_32_to_1.v(50): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 50
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(51): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 51
-Error (10231): Verilog HDL error at mux_32_to_1.v(51): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 51
-Error (10137): Verilog HDL Procedural Assignment error at mux_32_to_1.v(52): object "encoder_out" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 52
-Error (10231): Verilog HDL error at mux_32_to_1.v(52): value cannot be assigned to input "encoder_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(25): created implicit net for "Neg_Out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 25
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 48
+Info (12128): Elaborating entity "registerMDR" for hierarchy "registerMDR:MDR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 71
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "registerMDR:MDR|mux_2_1:MDMux" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 22
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:encoder_32_5" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 108
+Warning (10762): Verilog HDL Case Statement warning at encoder_32_to_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
+Info (10264): Verilog HDL Case Statement information at encoder_32_to_5.v(6): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 117
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 37 errors, 7 warnings
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Thu Feb 15 11:19:37 2024
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:08
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4775 megabytes
+    Info: Processing ended: Mon Feb 26 19:44:46 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +--------------------------------------------+
