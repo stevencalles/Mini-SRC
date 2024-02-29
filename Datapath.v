@@ -20,7 +20,7 @@ BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7,
 BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11, BusMuxIn_R12,
 BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO,
 BusMuxIn_Zhigh, BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxOut_Y, BusMuxIn_InPort, C_sign_extended,
-BusMuxIn_MAR;
+BusMuxIn_MAR, C_out_HI, C_out_LO;
 
 wire R0out = 0; 
 wire R1out = 0;  
@@ -40,8 +40,6 @@ wire HIout = 0;
 wire LOout = 0;  
 wire InPortout = 0; 
 wire Cout = 0; 
-
-wire [63:0] C_data_out;
 
 //Devices
 register R0(clock, clear, R0in, BusMuxOut, BusMuxIn_R0);
@@ -64,8 +62,8 @@ register R15(clock, clear, R15in, BusMuxOut, BusMuxIn_R15);
 register Y(clock, clear, Yin, BusMuxOut, BusMuxOut_Y);
 register HI(clock, clear, HIin, BusMuxOut, BusMuxIn_HI);
 register LO(clock, clear, LOin, BusMuxOut, BusMuxIn_LO);
-register Zhigh(clock, clear, Zhighin, C_data_out[63:32], BusMuxIn_Zhigh);
-register Zlow(clock, clear, Zlowin, C_data_out[31:0], BusMuxIn_Zlow);
+register Zhigh(clock, clear, Zhighin, C_out_HI, BusMuxIn_Zhigh);
+register Zlow(clock, clear, Zlowin, C_out_LO, BusMuxIn_Zlow);
 register PC(clock, clear, PCin, BusMuxOut, BusMuxIn_PC);	
 registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusMuxOut(BusMuxOut), .Mdatain(Mdatain), .MDRout(BusMuxIn_MDR));
 register MAR(clock, clear, MARin, Mdatain, BusMuxIn_MAR);
@@ -105,6 +103,8 @@ register MAR(clock, clear, MARin, Mdatain, BusMuxIn_MAR);
 	
 // Instatiating 32-to-5 encoder for the bus
 encoder_32_5 encoder_32_5(encoder_in, encoder_out);
+
+alu_32 alu(.IncPC(IncPC), .A(BusMuxOut_Y), .B(BusMuxOut), .opcode(opcode), .C_out_HI(C_out_HI), .C_out_LO(C_out_LO));
 
 
 Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMuxIn_R2), .BusMuxIn_R3(BusMuxIn_R3), 

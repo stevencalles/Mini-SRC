@@ -91,7 +91,7 @@ module and_32_tb;
                 #25 MDRout <= 0; R1in <= 0;
             end
             T0: begin
-					PCout <= 1; MARin <= 1; IncPC <= 1; Zlowin <= 1;
+					PCout <= 1; MARin <= 1; IncPC <= 1; //Zlowin <= 1;
 					PCout <= 0;  MARin <= 0; PCin <= 1;
 					#15 PCin <= 0; IncPC <= 0;
             end
@@ -106,15 +106,15 @@ module and_32_tb;
             end
             T3: begin
                 R2out <= 1; Yin <= 1;
-                #15 R2out <= 0; Yin <= 0;
+                #25 R2out <= 0; Yin <= 0;
             end
             T4: begin
                 R3out <= 1; AND_signal <= 5'b01010; Zlowin <= 1;
-                #15 R3out <= 0; Zlowin <= 0;
+                #25 R3out <= 0; Zlowin <= 0;
             end
             T5: begin
                 Zlowout <= 1; R1in <= 1;
-                #15 Zlowout <= 0; R1in <= 0;
+                #25 Zlowout <= 0; R1in <= 0;
             end
         endcase
 		  holdstate = 0;
