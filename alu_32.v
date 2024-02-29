@@ -23,9 +23,9 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	SHR	SHR(.A(A), .shiftNum(B), .Result(shr_out));
 	SHRA	SHRA(.A(A), .shiftNum(B), .Result(shra_out));
 	SHL	SHL(.A(A), .shiftNum(B), .Result(shl_out));
-//	ROR	ROR(.A(A), .B(B), .Result(ror_out));
-//	ROL	ROL(.A(A), .B(B), .Result(rol_out));
-//	or_32	or_32(.A(A), .B(B), .z(or_out));
+	ROR	ROR(.A(A), .B(B), .Result(ror_out));
+	ROL	ROL(.A(A), .B(B), .Result(rol_out));
+	or_32	or_32(.A(A), .B(B), .z(or_out));
 
 	always @ (*) begin
 		case (IncPC)
