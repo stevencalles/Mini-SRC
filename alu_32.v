@@ -21,6 +21,8 @@ module alu_32(input InPC, input [31:0] A, B, input [4:0] opcode, output reg[31:0
 	assign Not_out = ~A;
 	
 	// different ALU operations
+	Div Div(.A(Q), .B(M), .lo(Quo), .hi(R));
+	
 	mul mul(.A(A), .B(B), .lo(Lo), .hi(Hi);
 	adder	adder(.A(A), .B(B), .Add_out(Result));
 	SWITCH_TO_NEG	SWITCH_TO_NEG(.B(B), .Neg_Result(Result));	//switch B to -B
@@ -68,11 +70,13 @@ module alu_32(input InPC, input [31:0] A, B, input [4:0] opcode, output reg[31:0
 							output_result = Or_out;
 							end
 						Mul: begin
-							LO = Lo;
-							HI = HI;
+							LO = lo;
+							HI = hI;
 							end
 						Div: begin
-							output_result = Or_out;
+							LO = lo;
+							HI = hI;
+							output_result = lo;
 							end
 						Not: begin
 							output_result = Not_out;
