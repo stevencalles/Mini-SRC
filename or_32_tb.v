@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module and_32_tb;
+module or_32_tb;
 
 	reg clock, clear, PCout, Zlowout, MDRout, R2out, R3out, Zhighout;
 	reg MARin, PCin, MDRin, IRin, Yin;

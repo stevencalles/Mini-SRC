@@ -2,7 +2,7 @@ module Datapath(
 	input wire PCout,
 	input Zhighout, Zlowout, 
 	input MDRout,
-	input R2out, R3out, 
+	input [15:0] R0_15_out,
 	input MARin, PCin, MDRin, IRin, Yin, 
 	input IncPC, 
 	input Read, 
@@ -22,20 +22,16 @@ BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO,
 BusMuxIn_Zhigh, BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxOut_Y, BusMuxIn_InPort, C_sign_extended,
 BusMuxIn_MAR, C_out_HI, C_out_LO;
 
-wire R0out = 0; 
-wire R1out = 0;  
-wire R5out = 0;
-wire R4out = 0;  
-wire R6out = 0;  
-wire R7out = 0;  
-wire R8out = 0;  
-wire R9out = 0;  
-wire R10out = 0; 
-wire R11out = 0;  
-wire R12out = 0;  
-wire R13out = 0;  
-wire R14out = 0;  
-wire R15out = 0;  
+reg [15:0] R0_15_out_ENC;
+
+initial begin
+	R0_15_out_ENC = 16'd0;
+end
+
+always @(*) begin
+	R0_15_out_ENC <= R0_15_out;
+end
+
 wire HIout = 0;  
 wire LOout = 0;  
 wire InPortout = 0; 
@@ -83,22 +79,7 @@ register MAR(clock, clear, MARin, Mdatain, BusMuxIn_MAR);
 								Zhighout,
 								LOout,
 								HIout,
-								R15out,
-								R14out,
-								R13out,
-								R12out,
-								R11out,
-								R10out,
-								R9out,
-								R8out,
-								R7out,
-								R6out,
-								R5out,
-								R4out,
-								R3out,
-								R2out,
-								R1out,
-								R0out
+								R0_15_out
 								};
 	
 // Instatiating 32-to-5 encoder for the bus

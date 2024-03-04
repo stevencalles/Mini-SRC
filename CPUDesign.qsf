@@ -52,7 +52,7 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH and_32_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH or_32_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME tutorial_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tutorial_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id tutorial_tb
@@ -64,12 +64,10 @@ set_global_assignment -name VERILOG_FILE register.v
 set_global_assignment -name VERILOG_FILE subtracter.v
 set_global_assignment -name VERILOG_FILE and_32_tb.v
 set_global_assignment -name VERILOG_FILE and_32.v
-set_global_assignment -name EDA_TEST_BENCH_FILE tutorial_tb.v -section_id tutorial_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME and_32_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id and_32_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id and_32_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME and_32_tb -section_id and_32_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE and_32_tb.v -section_id and_32_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -82,5 +80,20 @@ set_global_assignment -name VERILOG_FILE SHL.v
 set_global_assignment -name VERILOG_FILE SWITCH_TO_NEG.v
 set_global_assignment -name VERILOG_FILE SHR.v
 set_global_assignment -name VERILOG_FILE SHRA.v
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE OR.v
+set_global_assignment -name VERILOG_FILE mul_32.v
+set_global_assignment -name VERILOG_FILE mul_32_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME mul_32_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mul_32_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mul_32_tb -section_id mul_32_tb
+set_global_assignment -name VERILOG_FILE or_32_tb.v
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id mul_32_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME or_32_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id or_32_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id or_32_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME or_32_tb -section_id or_32_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE tutorial_tb.v -section_id tutorial_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE and_32_tb.v -section_id and_32_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE mul_32_tb.v -section_id mul_32_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE or_32_tb.v -section_id or_32_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
