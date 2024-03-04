@@ -1,5 +1,5 @@
 Flow report for CPUDesign
-Mon Mar 04 14:53:08 2024
+Mon Mar 04 17:10:20 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Mon Mar 04 14:53:08 2024       ;
+; Flow Status                 ; Successful - Mon Mar 04 17:10:20 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; CPUDesign                                   ;
 ; Top-level Entity Name       ; Datapath                                    ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/04/2024 14:52:59 ;
+; Start date & time ; 03/04/2024 17:10:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPUDesign           ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 54991827289163.170958197902124         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 54991827289163.170959020636592         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tutorial_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; and_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; or_32_tb       ;
@@ -116,8 +116,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4781 MB             ; 00:00:09                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Elaboration ; 00:00:15     ; 1.0                     ; 4781 MB             ; 00:00:11                           ;
+; Total                  ; 00:00:15     ; --                      ; --                  ; 00:00:11                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
