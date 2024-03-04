@@ -12,140 +12,140 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v 
 # -- Compiling module mux_2_1
 # 
 # Top level modules:
 # 	mux_2_1
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v 
 # -- Compiling module Datapath
 # 
 # Top level modules:
 # 	Datapath
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v 
-# -- Compiling module adder
-# 
-# Top level modules:
-# 	adder
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v 
 # -- Compiling module register
 # -- Compiling module registerMDR
 # 
 # Top level modules:
 # 	registerMDR
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v 
 # -- Compiling module and_32
 # 
 # Top level modules:
 # 	and_32
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v 
 # -- Compiling module alu_32
 # 
 # Top level modules:
 # 	alu_32
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:14 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 09:05:14 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v 
 # -- Compiling module encoder_32_5
 # 
 # Top level modules:
 # 	encoder_32_5
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v 
 # -- Compiling module SHL
 # 
 # Top level modules:
 # 	SHL
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v 
 # -- Compiling module SWITCH_TO_NEG
 # 
 # Top level modules:
 # 	SWITCH_TO_NEG
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v 
 # -- Compiling module SHR
 # 
 # Top level modules:
 # 	SHR
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v 
 # -- Compiling module SHRA
 # 
 # Top level modules:
 # 	SHRA
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:52:26 on Feb 29,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v 
+# -- Compiling module or_32
+# 
+# Top level modules:
+# 	or_32
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v 
 # -- Compiling module and_32_tb
 # 
 # Top level modules:
 # 	and_32_tb
-# End time: 09:05:15 on Feb 29,2024, Elapsed time: 0:00:00
+# End time: 09:52:26 on Feb 29,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  and_32_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" and_32_tb 
-# Start time: 09:05:15 on Feb 29,2024
+# Start time: 09:52:26 on Feb 29,2024
 # Loading work.and_32_tb
 # Loading work.Datapath
 # Loading work.register
@@ -153,12 +153,12 @@
 # Loading work.mux_2_1
 # Loading work.encoder_32_5
 # Loading work.alu_32
-# Loading work.adder
 # Loading work.SWITCH_TO_NEG
 # Loading work.and_32
 # Loading work.SHR
 # Loading work.SHRA
 # Loading work.SHL
+# Loading work.or_32
 # Loading work.Bus
 # ** Warning: (vsim-3017) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Too few port connections. Expected 38, found 26.
 #    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v
@@ -174,25 +174,21 @@
 # ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R13in'.
 # ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R14in'.
 # ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R15in'.
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
 # ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(23): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v
 # ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(24): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHRA File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v
 # ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(25): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v(1).
 #    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHL File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v
+# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(28): [PCDPC] - Port size (32) does not match connection size (1) for port 'z'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/or_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: steve  Hostname: PC-DE-STEVEN  ProcessID: 33364
-#           Attempting to use alternate WLF file "./wlftn9k94x".
+#           Attempting to use alternate WLF file "./wlftsgthmw".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftn9k94x
+#           Using alternate file: ./wlftsgthmw
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -201,39 +197,5 @@
 add wave -position insertpoint  \
 sim:/and_32_tb/DUT/R1/BusMuxOut \
 sim:/and_32_tb/DUT/R1/BusMuxIn
-add wave -position insertpoint  \
-sim:/and_32_tb/DUT/alu/A \
-sim:/and_32_tb/DUT/alu/B \
-sim:/and_32_tb/DUT/alu/opcode \
-sim:/and_32_tb/DUT/alu/C_out_HI \
-sim:/and_32_tb/DUT/alu/C_out_LO
-restart
-# ** Warning: (vsim-3017) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Too few port connections. Expected 38, found 26.
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R4in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R5in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R6in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R7in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R8in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R9in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R10in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R11in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R12in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R13in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R14in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32_tb.v(21): [TFMPC] - Missing connection for port 'R15in'.
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(19): [PCDPC] - Port size (8) does not match connection size (32) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v(2).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(23): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHR.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(24): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHRA File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v
-# ** Warning: (vsim-3015) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v(25): [PCDPC] - Port size (32) does not match connection size (1) for port 'Result'. The port definition is at: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v(1).
-#    Time: 0 ps  Iteration: 0  Instance: /and_32_tb/DUT/alu/SHL File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHL.v
-run 500ns
-# End time: 09:23:38 on Feb 29,2024, Elapsed time: 0:18:23
-# Errors: 0, Warnings: 40
+# End time: 18:05:08 on Feb 29,2024, Elapsed time: 8:12:42
+# Errors: 0, Warnings: 19

@@ -16,16 +16,16 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	assign Not_out = ~A;
 	
 	// different ALU operations
-	adder	adder(.A(A), .B(B), .Result(Add_out));
+	adder	adder(.A(A), .B(B), .Z(Add_out));
+	subtracter()
 	SWITCH_TO_NEG	SWITCH_TO_NEG(.B(B), .Result(Neg_Result));	//switch B to -B
-//	adder	adder(.A(A), .B(Neg_Result), .Result(Sub_out));			//add A+(-B)
 	and_32 and_32(.A(A), .B(B), .z(And_out));
 	SHR	SHR(.A(A), .shiftNum(B), .Result(shr_out));
 	SHRA	SHRA(.A(A), .shiftNum(B), .Result(shra_out));
 	SHL	SHL(.A(A), .shiftNum(B), .Result(shl_out));
 	ROR	ROR(.A(A), .B(B), .Result(ror_out));
 	ROL	ROL(.A(A), .B(B), .Result(rol_out));
-	or_32	or_32(.A(A), .B(B), .z(or_out));
+	OR OR(.A(A), .B(B), .z(or_out));
 
 	always @ (*) begin
 		case (IncPC)

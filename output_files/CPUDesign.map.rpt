@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Thu Feb 29 09:23:19 2024
+Fri Mar 01 17:38:49 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -12,17 +12,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   4. Parameter Settings for User Entity Instance: alu_32:alu
   5. Analysis & Elaboration Settings
   6. Port Connectivity Checks: "alu_32:alu|or_32:or_32"
-  7. Port Connectivity Checks: "alu_32:alu|ROL:ROL"
-  8. Port Connectivity Checks: "alu_32:alu|ROR:ROR"
-  9. Port Connectivity Checks: "alu_32:alu|SHL:SHL"
- 10. Port Connectivity Checks: "alu_32:alu|SHRA:SHRA"
- 11. Port Connectivity Checks: "alu_32:alu|SHR:SHR"
- 12. Port Connectivity Checks: "alu_32:alu|SWITCH_TO_NEG:SWITCH_TO_NEG"
- 13. Port Connectivity Checks: "alu_32:alu|adder:adder"
- 14. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
- 15. Port Connectivity Checks: "register:MAR"
- 16. Analysis & Elaboration Messages
- 17. Analysis & Elaboration Suppressed Messages
+  7. Port Connectivity Checks: "alu_32:alu|SHL:SHL"
+  8. Port Connectivity Checks: "alu_32:alu|SHRA:SHRA"
+  9. Port Connectivity Checks: "alu_32:alu|SHR:SHR"
+ 10. Port Connectivity Checks: "alu_32:alu|SWITCH_TO_NEG:SWITCH_TO_NEG"
+ 11. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
+ 12. Port Connectivity Checks: "register:MAR"
+ 13. Analysis & Elaboration Messages
+ 14. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -48,7 +45,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Feb 29 09:23:19 2024           ;
+; Analysis & Elaboration Status ; Successful - Fri Mar 01 17:38:49 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -194,30 +191,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu_32:alu|ROL:ROL"                                                                                                                                        ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type    ; Severity         ; Details                                                                                                                                      ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; B         ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; Result    ; Output  ; Warning          ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "Result[31..1]" have no fanouts                  ;
-; Result    ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; numRotate ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu_32:alu|ROR:ROR"                                                                                                                                        ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type    ; Severity         ; Details                                                                                                                                      ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; B         ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity                                                                                       ;
-; Result    ; Output  ; Warning          ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "Result[31..1]" have no fanouts                  ;
-; Result    ; Output  ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; numRotate ; Input   ; Warning          ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-----------+---------+------------------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu_32:alu|SHL:SHL"                                                                                                           ;
 +--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
@@ -257,17 +230,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu_32:alu|adder:adder"                                                                                                                                                              ;
-+--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; A      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; B      ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; Result ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (32 bits) it drives.  The 24 most-significant bit(s) in the port expression will be connected to GND.            ;
-+--------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------+
 ; Port Connectivity Checks: "encoder_32_5:encoder_32_5" ;
 +------------+-------+----------+-----------------------+
@@ -294,7 +256,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Feb 29 09:23:11 2024
+    Info: Processing started: Fri Mar 01 17:38:33 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -302,8 +264,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_2_t
     Info (12023): Found entity 1: mux_2_1 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
     Info (12023): Found entity 1: Datapath File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+Info (12021): Found 3 design units, including 3 entities, in source file adder.v
     Info (12023): Found entity 1: adder File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 2
+    Info (12023): Found entity 2: add_16 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 10
+    Info (12023): Found entity 3: add_4 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 21
 Info (12021): Found 2 design units, including 2 entities, in source file register.v
     Info (12023): Found entity 1: register File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 1
     Info (12023): Found entity 2: registerMDR File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 20
@@ -333,12 +297,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file shra.v
     Info (12023): Found entity 1: SHRA File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SHRA.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file or_32.v
     Info (12023): Found entity 1: or_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(13): created implicit net for "cout1" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(14): created implicit net for "cout2" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at adder.v(15): created implicit net for "cout3" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v Line: 15
 Warning (10236): Verilog HDL Implicit Net warning at subtracter.v(12): created implicit net for "Result" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/subtracter.v Line: 12
 Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(23): created implicit net for "shr_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 23
 Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(24): created implicit net for "shra_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 24
 Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(25): created implicit net for "shl_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(26): created implicit net for "ror_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(27): created implicit net for "rol_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 27
 Warning (10236): Verilog HDL Implicit Net warning at alu_32.v(28): created implicit net for "or_out" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 28
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 45
@@ -348,6 +313,7 @@ Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:enco
 Warning (10762): Verilog HDL Case Statement warning at encoder_32_to_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
 Info (10264): Verilog HDL Case Statement information at encoder_32_to_5.v(6): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
 Info (12128): Elaborating entity "alu_32" for hierarchy "alu_32:alu" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 107
+Warning (10858): Verilog HDL warning at alu_32.v(14): object Add_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10858): Verilog HDL warning at alu_32.v(14): object Sub_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10858): Verilog HDL warning at alu_32.v(14): object Shr_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10858): Verilog HDL warning at alu_32.v(14): object Shra_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
@@ -360,6 +326,7 @@ Warning (10036): Verilog HDL or VHDL warning at alu_32.v(14): object "Not_out" a
 Warning (10270): Verilog HDL Case Statement warning at alu_32.v(37): incomplete case statement has no default case item File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 37
 Warning (10240): Verilog HDL Always Construct warning at alu_32.v(31): inferring latch(es) for variable "C_out_LO", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
 Warning (10240): Verilog HDL Always Construct warning at alu_32.v(31): inferring latch(es) for variable "C_out_HI", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
+Warning (10030): Net "Add_out" at alu_32.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10030): Net "Sub_out" at alu_32.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10030): Net "Shr_out" at alu_32.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
 Warning (10030): Net "Shra_out" at alu_32.v(14) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 14
@@ -432,27 +399,20 @@ Info (10041): Inferred latch for "C_out_LO[28]" at alu_32.v(31) File: C:/Users/s
 Info (10041): Inferred latch for "C_out_LO[29]" at alu_32.v(31) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
 Info (10041): Inferred latch for "C_out_LO[30]" at alu_32.v(31) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
 Info (10041): Inferred latch for "C_out_LO[31]" at alu_32.v(31) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
-Info (12128): Elaborating entity "adder" for hierarchy "alu_32:alu|adder:adder" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 19
 Info (12128): Elaborating entity "SWITCH_TO_NEG" for hierarchy "alu_32:alu|SWITCH_TO_NEG:SWITCH_TO_NEG" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 20
 Info (12128): Elaborating entity "and_32" for hierarchy "alu_32:alu|and_32:and_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 22
 Info (12128): Elaborating entity "SHR" for hierarchy "alu_32:alu|SHR:SHR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 23
 Info (12128): Elaborating entity "SHRA" for hierarchy "alu_32:alu|SHRA:SHRA" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 24
 Info (12128): Elaborating entity "SHL" for hierarchy "alu_32:alu|SHL:SHL" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 25
-Info (12128): Elaborating entity "ROR" for hierarchy "alu_32:alu|ROR:ROR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 26
-Warning (10230): Verilog HDL assignment warning at ROR.v(3): truncated value with size 64 to match size of target (32) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ROR.v Line: 3
-Info (12128): Elaborating entity "ROL" for hierarchy "alu_32:alu|ROL:ROL" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 27
-Warning (10230): Verilog HDL assignment warning at ROL.v(3): truncated value with size 64 to match size of target (32) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ROL.v Line: 3
 Info (12128): Elaborating entity "or_32" for hierarchy "alu_32:alu|or_32:or_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 28
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 116
-Error (12002): Port "B" does not exist in macrofunction "ROL" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 27
-Error (12002): Port "B" does not exist in macrofunction "ROR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 26
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 32 warnings
-    Error: Peak virtual memory: 4778 megabytes
-    Error: Processing ended: Thu Feb 29 09:23:19 2024
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:06
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4779 megabytes
+    Info: Processing ended: Fri Mar 01 17:38:49 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +--------------------------------------------+
