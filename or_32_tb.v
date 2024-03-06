@@ -82,7 +82,7 @@ module or_32_tb;
                 #25 MDRout <= 0; R3in <= 0;
             end
             Reg_load3a: begin
-                Mdatain <= 32'h00000018;		// just seeing if value can be written to reg
+                Mdatain <= 32'h00000018;	
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end

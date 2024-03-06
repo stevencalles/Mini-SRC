@@ -82,7 +82,7 @@ module add_32_tb;
                 #25 MDRout <= 0; R3in <= 0;
             end
             Reg_load3a: begin
-                Mdatain <= 32'h00000018;		// just seeing if value can be written to reg
+                Mdatain <= 32'h00000018;		
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end
@@ -96,7 +96,7 @@ module add_32_tb;
 					#15 PCin <= 0; IncPC <= 0;
             end
             T1: begin
-                Mdatain <= 32'h28918000; // opcode for “or R1, R2, R3” to be placed here in the future
+                Mdatain <= 32'h28918000; // regs opcode to be placed here in the future
                 Read <= 1; MDRin <= 1;
                 #15 Read <= 0; MDRin <= 0;
             end

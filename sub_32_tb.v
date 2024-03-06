@@ -21,7 +21,7 @@ module sub_32_tb;
 	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .R0_15_out({12'd0, R3out, R2out, 2'd0}), 
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), 
 	.opcode(SUB_signal), .R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .clock(clock), .clear(clear), .Mdatain(Mdatain), .HIin(HIin),
-	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin));
+	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin), .LOout(LOout), .HIout(HIout));
 	
 	
 	
@@ -56,7 +56,7 @@ module sub_32_tb;
 			case(Present_state)
 				Default: begin
 					PCout <= 0; Zlowout <= 0; Zhighout <= 0; MDRout <= 0;
-					clear <= 0;
+					clear <= 0; HIout <= 0; LOout <= 0;
 					R2out <= 0; R3out <= 0; MARin <= 0; Zlowin <= 0; SUB_signal <= 5'b00000;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0; HIin <= 0; LOin <= 0;
 					IncPC <= 0; Read <= 0;
@@ -82,7 +82,7 @@ module sub_32_tb;
                 #25 MDRout <= 0; R3in <= 0;
             end
             Reg_load3a: begin
-                Mdatain <= 32'h00000018;		// just seeing if value can be written to reg
+                Mdatain <= 32'h00000018;		
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end
@@ -96,7 +96,7 @@ module sub_32_tb;
 					#15 PCin <= 0; IncPC <= 0;
             end
             T1: begin
-                Mdatain <= 32'h28918000; // opcode for “or R1, R2, R3” to be placed here in the future
+                Mdatain <= 32'h28918000; // regs opcode to be placed here in the future
                 Read <= 1; MDRin <= 1;
                 #15 Read <= 0; MDRin <= 0;
             end
@@ -109,7 +109,7 @@ module sub_32_tb;
                 #25 R2out <= 0; Yin <= 0;
             end
             T4: begin
-                R3out <= 1; SUB_signal <= 5'b00011; Zlowin <= 1;
+                R3out <= 1; SUB_signal <= 5'b00100; Zlowin <= 1;
                 #25 R3out <= 0; Zlowin <= 0;
             end
             T5: begin

@@ -73,7 +73,7 @@ module and_32_tb;
                 #25 MDRout <= 0; R2in <= 0;
             end
             Reg_load2a: begin
-                Mdatain <= 32'h00000014;
+                Mdatain <= 32'h00000014;			// loading with value 20
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end

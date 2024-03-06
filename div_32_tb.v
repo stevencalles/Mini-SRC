@@ -93,7 +93,7 @@ module div_32_tb;
 					#15 PCin <= 0; IncPC <= 0;
             end
             T1: begin
-                Mdatain <= 32'h28918000; // opcode for “or R1, R2, R3” to be placed here in the future
+                Mdatain <= 32'h28918000; // regs opcode to be placed here in the future
                 Read <= 1; MDRin <= 1;
                 #15 Read <= 0; MDRin <= 0;
             end
