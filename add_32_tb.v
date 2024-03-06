@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module or_32_tb;
+module add_32_tb;
 
 	reg clock, clear, PCout, Zlowout, MDRout, R2out, R3out, Zhighout;
 	reg MARin, PCin, MDRin, IRin, Yin;
@@ -7,7 +7,7 @@ module or_32_tb;
 	reg Zhighin, Zlowin, Cin;
 	reg IncPC, Read, R1in, R2in, R3in;
 	reg R0in;
-	reg [4:0] OR_signal;
+	reg [4:0] ADD_signal;
 	reg [31:0] Mdatain;
 	reg holdstate = 0;
 	
@@ -20,7 +20,7 @@ module or_32_tb;
 	
 	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .R0_15_out({12'd0, R3out, R2out, 2'd0}), 
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), 
-	.opcode(OR_signal), .R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .clock(clock), .clear(clear), .Mdatain(Mdatain), .HIin(HIin),
+	.opcode(ADD_signal), .R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .clock(clock), .clear(clear), .Mdatain(Mdatain), .HIin(HIin),
 	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin));
 	
 	
@@ -57,7 +57,7 @@ module or_32_tb;
 				Default: begin
 					PCout <= 0; Zlowout <= 0; Zhighout <= 0; MDRout <= 0;
 					clear <= 0;
-					R2out <= 0; R3out <= 0; MARin <= 0; Zlowin <= 0; OR_signal <= 5'b00000;
+					R2out <= 0; R3out <= 0; MARin <= 0; Zlowin <= 0; ADD_signal <= 5'b00000;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0; HIin <= 0; LOin <= 0;
 					IncPC <= 0; Read <= 0;
 					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h00000000;
@@ -109,7 +109,7 @@ module or_32_tb;
                 #25 R2out <= 0; Yin <= 0;
             end
             T4: begin
-                R3out <= 1; OR_signal <= 5'b01011; Zlowin <= 1;
+                R3out <= 1; ADD_signal <= 5'b00011; Zlowin <= 1;
                 #25 R3out <= 0; Zlowin <= 0;
             end
             T5: begin

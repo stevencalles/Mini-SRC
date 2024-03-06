@@ -11,7 +11,7 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	Or= 5'b01011;
 
 
-	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out;
+	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out, mul_HI, mul_LO, div_HI, div_LO;
 	wire Add_Cout, Sub_Cout;
 	
 	assign Not_out = ~A;
@@ -27,7 +27,8 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	ror_32 ror_32(.A(A), .numRotate(B), .Z(ror_out));
 	rol_32 rol_32(.A(A), .numRotate(B), .Z(rol_out));
 	mul_32 mul_32(.A(A), .B(B), .HI(mul_HI), .LO(mul_LO));
-	or_32 or_32(.A(A), .B(B), .Z(or_out));
+	div_32 div_32(.A(A), .M(B), .Quo(div_HI), .R(div_LO));
+	or_32 or_32(.A(A), .B(B), .Z(Or_out));
 	not_32 not_32(.A(A), .Z(Not_out));
 
 	always @ (*) begin

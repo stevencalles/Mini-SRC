@@ -9,54 +9,32 @@ z2
 cModel Technology
 Z0 dC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/simulation/modelsim
 vadd_16
-Z1 !s110 1709581996
+Z1 !s110 1709739677
 !i10b 1
-!s100 ?a3<745ADR0<?AR2Wm5mK1
-I_8IR0<P8]gl;TdkEiY]iN1
+!s100 l9:TDejbN7CD<QK=iz0Zc2
+IGnLi14e1GkW>7oMNg^e5H3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1709332706
-Z4 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
-Z5 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v
+Z3 w1709739637
+Z4 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v
+Z5 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v
 L0 10
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1709581996.000000
-Z8 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/adder.v|
+Z7 !s108 1709739677.000000
+Z8 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v|
 !i113 1
 Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC
 Z12 tCvgOpt 0
-vadd_4
+vadd_32
 R1
 !i10b 1
-!s100 4:TjTf4jfIFHz>;XS4BKn1
-I14oJ<=OClIKh6hlCE2<W01
-R2
-R0
-R3
-R4
-R5
-L0 21
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
-!i113 1
-R10
-R11
-R12
-vadder
-R1
-!i10b 1
-!s100 @EE[3TLmXkUl8OoYz_G8O3
-IUz<<UWMgBECX4i<F@k[FK2
+!s100 =2<<TTPl>EKC7DJW:LO0W2
+InaSGPnk[b[JHlgzebkg?l3
 R2
 R0
 R3
@@ -74,14 +52,58 @@ R9
 R10
 R11
 R12
-valu_32
+vadd_32_tb
 R1
 !i10b 1
-!s100 ^k=J=[KO>oUiG89mdz0]A2
-IPkPc4::ce?IMcI8[_Z5OW3
+!s100 8elRBO1T?]_9g6FEYjXEK2
+IjAzU3NzbFVKJCFeb<H_KG2
 R2
 R0
-w1709578142
+w1709737564
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32_tb.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32_tb.v|
+!i113 1
+R10
+R11
+R12
+vadd_4
+R1
+!i10b 1
+!s100 PeBTn]DEYdiV>R6U7^9RI3
+Ia87VoZn@_4Cfih7Ca0kV:0
+R2
+R0
+R3
+R4
+R5
+Z13 L0 20
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+valu_32
+Z14 !s110 1709739676
+!i10b 1
+!s100 aVHnNb:h]a0Y5K1Vz64]@3
+IA571gn3ea>KPalX9l^h0=2
+R2
+R0
+w1709737013
 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v
 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v
 L0 1
@@ -89,7 +111,7 @@ R6
 r1
 !s85 0
 31
-R7
+Z15 !s108 1709739676.000000
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v|
 !i113 1
@@ -97,13 +119,13 @@ R10
 R11
 R12
 vand_32
-R1
+R14
 !i10b 1
-!s100 P?BFImH[9km91Wz5PG56]3
-I17DQk<LblZGT541L5Ji:h2
+!s100 CWiHdTe=zZV2bh1WQ6[6d3
+IAEWW<YBL?P9l;<eoKz_Wb0
 R2
 R0
-w1707410479
+Z16 w1709590049
 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v
 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v
 L0 1
@@ -111,7 +133,7 @@ R6
 r1
 !s85 0
 31
-R7
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v|
 !i113 1
@@ -119,7 +141,7 @@ R10
 R11
 R12
 vBus
-R1
+R14
 !i10b 1
 !s100 JBhn;0mVedP;_;mK<O1[j1
 Ic?hEATjkS8^eO33^jg`o90
@@ -133,7 +155,7 @@ R6
 r1
 !s85 0
 31
-R7
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v|
 !i113 1
@@ -142,7 +164,7 @@ R11
 R12
 n@bus
 vDatapath
-R1
+R14
 !i10b 1
 !s100 hf?og25QDD]>gcA>X[64?2
 ID4?J6l6;_ePB:8[ORebl71
@@ -156,7 +178,7 @@ R6
 r1
 !s85 0
 31
-R7
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v|
 !i113 1
@@ -164,8 +186,30 @@ R10
 R11
 R12
 n@datapath
+vdiv_32
+R1
+!i10b 1
+!s100 E`M:W9O3c`_l6I4EBV^B20
+IUQi5<=CD^93aR:9C^a=oI0
+R2
+R0
+w1709697340
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v|
+!i113 1
+R10
+R11
+R12
 vencoder_32_5
-Z13 !s110 1709581997
+R14
 !i10b 1
 !s100 EmOF63h[M@j294d?JY4Jo1
 ILf3O78l<hUEBU`IN[_FJl3
@@ -179,7 +223,7 @@ R6
 r1
 !s85 0
 31
-R7
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v|
 !i113 1
@@ -187,7 +231,7 @@ R10
 R11
 R12
 vmul_32
-R13
+R14
 !i10b 1
 !s100 oIfP@B6N@BebHJ1a5BR]J0
 IW[QnHbm_@3cfo>n^R;:563
@@ -201,7 +245,7 @@ R6
 r1
 !s85 0
 31
-Z14 !s108 1709581997.000000
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v|
 !i113 1
@@ -209,7 +253,7 @@ R10
 R11
 R12
 vmux_2_1
-R1
+R14
 !i10b 1
 !s100 oPC@;DTOj[>0W4g0cDhS22
 IkM:NL>5OYS]LobfJ96>Qd2
@@ -223,100 +267,253 @@ R6
 r1
 !s85 0
 31
-R7
+R15
 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v|
 !i113 1
 R10
 R11
 R12
-vor_32_tb
-R13
+vnot_32
+R1
 !i10b 1
-!s100 Sj4ZCl9g4A<2on;:WeCeR0
-I42oj44]=1JNB3eGc;h3KW1
+!s100 lajZI9iOL7H9V36?M_ddX3
+IhVQL7gfGT<iLBfmV69Ab^2
 R2
 R0
-w1709581975
-8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32_tb.v
-FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32_tb.v
-L0 2
+w1709588850
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v
+L0 1
 R6
 r1
 !s85 0
 31
+R7
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v|
+!i113 1
+R10
+R11
+R12
+vor_32
 R14
-!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32_tb.v|
+!i10b 1
+!s100 Lk>i;Z6dYIUNEFcDl?^`>1
+I;D_kVohN071P0AAz0Jd773
+R2
+R0
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v|
 !i113 1
 R10
 R11
 R12
 vregister
-R1
+R14
 !i10b 1
 !s100 dkjfLnJ<bO_<>I1RL_;4j1
 ICY3;zZ40MJd5@DoGo32Ki0
 R2
 R0
-Z15 w1708991621
-Z16 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v
-Z17 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v
+Z17 w1708991621
+Z18 8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v
+Z19 FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v
 L0 1
 R6
 r1
 !s85 0
 31
-R7
-Z18 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v|
-Z19 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v|
+R15
+Z20 !s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v|
+Z21 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v|
 !i113 1
 R10
 R11
 R12
 vregisterMDR
-R1
+R14
 !i10b 1
 !s100 _eflP_;K^^MknH_YKelgc0
 I3;gdgBWn@n15Lo8:bf;l;1
 R2
 R0
-R15
-R16
 R17
-L0 20
+R18
+R19
+R13
 R6
 r1
 !s85 0
 31
-R7
-R18
-R19
+R15
+R20
+R21
 !i113 1
 R10
 R11
 R12
 nregister@m@d@r
-vSWITCH_TO_NEG
-R13
+vrol_32
+R1
 !i10b 1
-!s100 L5BV55VZkDfP8REi<5N]X1
-IGXYS<SC9D:5mbGU;18Md]0
+!s100 7UM29VgOfhazRlnz0Y3@K2
+IhH;hgBXV7GQhLNYE[_Z[z1
 R2
 R0
-w1708144284
-8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v
-FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v
 L0 1
 R6
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/SWITCH_TO_NEG.v|
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v|
 !i113 1
 R10
 R11
 R12
-n@s@w@i@t@c@h_@t@o_@n@e@g
+vror_32
+R14
+!i10b 1
+!s100 9lg5A<j0R8UA>kLnJEY3H3
+I?3F]?;n5>YJ_dgA`mfzSn3
+R2
+R0
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v|
+!i113 1
+R10
+R11
+R12
+vshl_32
+R14
+!i10b 1
+!s100 lAT^A5kDJSLQQ_dR3E^j23
+I0I8BWlT190jU822b5^C^I2
+R2
+R0
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v|
+!i113 1
+R10
+R11
+R12
+vshr_32
+R14
+!i10b 1
+!s100 X]Iek8l9oS]E=:A_kV_g[2
+IQUE0OTSZKbLK?9mJDN<j[0
+R2
+R0
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v|
+!i113 1
+R10
+R11
+R12
+vshra_32
+R14
+!i10b 1
+!s100 ALl<iN[<bgccHFfFZ;LZ30
+ISQcY5GVY]@dMY@Cc_SRWL3
+R2
+R0
+R16
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v|
+!i113 1
+R10
+R11
+R12
+vsub_32
+R1
+!i10b 1
+!s100 VbZfZ>fU[Z?=bOE_lIl8N3
+IP7DF7f<hDaiD6011:T8821
+R2
+R0
+w1709590195
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v|
+!i113 1
+R10
+R11
+R12
+vswitch_to_neg_32
+R1
+!i10b 1
+!s100 ^h5C1<TAGHhAIfel[ITTd2
+I<RTdNDWY[c8<<[fi^5hDz0
+R2
+R0
+w1709589204
+8C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v
+FC:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC|C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v|
+!i113 1
+R10
+R11
+R12
