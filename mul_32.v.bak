@@ -4,7 +4,10 @@ module mul_32(input signed [31:0] A, B, output reg signed [31:0] HI, LO);
     reg [6:0] count;
     reg [1:0] state;
     reg [1:0] prev_bit;
+<<<<<<< HEAD
 	 reg signed [31:0] shifted_B;
+=======
+>>>>>>> efbae2930a4cf1ada750db9779de137d7df26c9f
 
     always @(A, B) begin
         case (state)
@@ -25,7 +28,11 @@ module mul_32(input signed [31:0] A, B, output reg signed [31:0] HI, LO);
                             product <= product - A; // Subtract A from product
                         end
                     end
+<<<<<<< HEAD
                     shifted_B <= {B[30:0], B[31]}; // Shift B right by 1 bit
+=======
+                    B <= {B[30:0], B[31]}; // Shift B right by 1 bit
+>>>>>>> efbae2930a4cf1ada750db9779de137d7df26c9f
                     count <= count + 1; // Increment counter
                     state <= 2'b01;
                 end
@@ -43,4 +50,8 @@ module mul_32(input signed [31:0] A, B, output reg signed [31:0] HI, LO);
             end
         endcase
     end
+<<<<<<< HEAD
 endmodule
+=======
+endmodule
+>>>>>>> efbae2930a4cf1ada750db9779de137d7df26c9f

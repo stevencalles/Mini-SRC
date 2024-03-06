@@ -95,6 +95,6 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 							end
 				endcase
 			end	
-		endcase
-	end
-endmodule 
+	endcase
+end
+endmodule
