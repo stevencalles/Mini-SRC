@@ -1,5 +1,5 @@
 Flow report for CPUDesign
-Wed Mar 06 10:41:06 2024
+Wed Mar 06 12:42:27 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Mar 06 10:41:06 2024       ;
+; Flow Status                 ; Successful - Wed Mar 06 12:42:27 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; CPUDesign                                   ;
 ; Top-level Entity Name       ; Datapath                                    ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/06/2024 10:40:57 ;
+; Start date & time ; 03/06/2024 12:42:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPUDesign           ;
 +-------------------+---------------------+
@@ -73,13 +73,14 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 54991827289163.170973965747880         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 54991827289163.170974693746156         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tutorial_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; and_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; or_32_tb       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mul_32_tb      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; div_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; add_32_tb      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; add_32_tb                              ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; div_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
@@ -87,21 +88,25 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; and_32_tb.v                            ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; or_32_tb.v                             ; --            ; --          ; or_32_tb       ;
 ; EDA_TEST_BENCH_FILE                  ; mul_32_tb.v                            ; --            ; --          ; mul_32_tb      ;
+; EDA_TEST_BENCH_FILE                  ; div_32_tb.v                            ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; add_32_tb.v                            ; --            ; --          ; add_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; tutorial_tb                            ; --            ; --          ; tutorial_tb    ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; and_32_tb                              ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; or_32_tb                               ; --            ; --          ; or_32_tb       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mul_32_tb                              ; --            ; --          ; mul_32_tb      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; div_32_tb                              ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; add_32_tb                              ; --            ; --          ; add_32_tb      ;
 ; EDA_TEST_BENCH_NAME                  ; tutorial_tb                            ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; and_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; mul_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; or_32_tb                               ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; add_32_tb                              ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; div_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; tutorial_tb    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; or_32_tb       ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; mul_32_tb      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; add_32_tb      ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
@@ -121,8 +126,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4781 MB             ; 00:00:09                           ;
-; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:09                           ;
+; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4782 MB             ; 00:00:10                           ;
+; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:10                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

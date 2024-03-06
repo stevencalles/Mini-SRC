@@ -1,6 +1,6 @@
 module Datapath(
 	input wire PCout,
-	input Zhighout, Zlowout, 
+	input Zhighout, Zlowout, LOout, HIout,
 	input MDRout,
 	input [15:0] R0_15_out,
 	input MARin, PCin, MDRin, IRin, Yin, 
@@ -32,10 +32,6 @@ always @(*) begin
 	R0_15_out_ENC <= R0_15_out;
 end
 
-wire HIout = 0;  
-wire LOout = 0;  
-wire InPortout = 0; 
-wire Cout = 0; 
 
 //Devices
 register R0(clock, clear, R0in, BusMuxOut, BusMuxIn_R0);
@@ -71,8 +67,8 @@ register MAR(clock, clear, MARin, Mdatain, BusMuxIn_MAR);
 	
 	assign encoder_in = {
 								{8{1'b0}},
-								Cout,
-								InPortout,
+								{1'b0},			// this will represent Cout eventually
+								{1'b0},	// this will represent InPortout eventually
 								MDRout,
 								PCout,
 								Zlowout,

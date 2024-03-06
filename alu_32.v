@@ -8,10 +8,12 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	Ror= 5'b01000,
 	Rol= 5'b01001,
 	And= 5'b01010,
-	Or= 5'b01011;
+	Or= 5'b01011,
+	Div= 5'b10000,
+	Mul= 5'b01111;
 
 
-	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out, mul_HI, mul_LO, div_HI, div_LO;
+	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out, Mul_HI, Mul_LO, Div_HI, Div_LO;
 	wire Add_Cout, Sub_Cout;
 	
 	assign Not_out = ~A;
@@ -26,8 +28,8 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	shl_32 shl_32(.A(A), .shiftNum(B), .Z(shl_out));
 	ror_32 ror_32(.A(A), .numRotate(B), .Z(ror_out));
 	rol_32 rol_32(.A(A), .numRotate(B), .Z(rol_out));
-	mul_32 mul_32(.A(A), .B(B), .HI(mul_HI), .LO(mul_LO));
-	div_32 div_32(.A(A), .M(B), .Quo(div_HI), .R(div_LO));
+	mul_32 mul_32(.A(A), .B(B), .HI(Mul_HI), .LO(Mul_LO));
+	div_32 div_32(.A(A), .M(B), .Quo(Div_LO), .R(Div_HI));
 	or_32 or_32(.A(A), .B(B), .Z(Or_out));
 	not_32 not_32(.A(A), .Z(Not_out));
 
@@ -74,6 +76,14 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 						Or: begin
 							C_out_LO <= Or_out;
 							C_out_HI <= 32'd0;
+							end
+						Div: begin
+							C_out_LO <= Div_LO;
+							C_out_HI <= Div_HI;
+							end
+						Mul: begin
+							C_out_LO <= Mul_LO;
+							C_out_HI <= Mul_HI;
 							end
 				endcase
 			end	

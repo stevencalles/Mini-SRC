@@ -1,26 +1,26 @@
 `timescale 1ns/10ps
-module and_32_tb;
+module div_32_tb;
 
-	reg clock, clear, PCout, Zlowout, MDRout, R2out, R3out, Zhighout;
+	reg clock, clear, PCout, Zlowout, MDRout, R4out, R5out, Zhighout;
 	reg MARin, PCin, MDRin, IRin, Yin;
 	reg LOout, HIin, LOin, HIout;
 	reg Zhighin, Zlowin, Cin;
-	reg IncPC, Read, R1in, R2in, R3in;
+	reg IncPC, Read, R4in, R5in;
 	reg R0in;
-	reg [4:0] AND_signal;
+	reg [4:0] DIV_signal;
 	reg [31:0] Mdatain;
 	reg holdstate = 0;
 	
 	parameter Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, Reg_load2a = 4'b0011,
 								Reg_load2b = 4'b0100, Reg_load3a = 4'b0101, Reg_load3b = 4'b0110, T0 = 4'b0111,
-								T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100;
+								T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100, T6 = 4'b1101;
 								
 	reg [3:0] Present_state = Default;
 	initial clear = 0;
 	
-	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .R0_15_out({12'd0, R3out, R2out, 2'd0}), 
+	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .R0_15_out({10'd0, R5out, R4out, 4'd0}), 
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), 
-	.opcode(AND_signal), .R0in(R0in), .R1in(R1in), .R2in(R2in), .R3in(R3in), .clock(clock), .clear(clear), .Mdatain(Mdatain), .HIin(HIin),
+	.opcode(DIV_signal), .R0in(R0in), .R4in(R4in), .R5in(R5in), .clock(clock), .clear(clear), .Mdatain(Mdatain), .HIin(HIin),
 	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin), .LOout(LOout), .HIout(HIout));
 	
 	
@@ -47,6 +47,7 @@ module and_32_tb;
 					T2					:	 Present_state = T3;
 					T3					:	 Present_state = T4;
 					T4					:	 Present_state = T5;
+					T5					:	 Present_state = T6;
 				endcase
 			end
 		end
@@ -57,38 +58,34 @@ module and_32_tb;
 				Default: begin
 					PCout <= 0; Zlowout <= 0; Zhighout <= 0; MDRout <= 0;
 					clear <= 0; HIout <= 0; LOout <= 0;
-					R2out <= 0; R3out <= 0; MARin <= 0; Zlowin <= 0; AND_signal <= 5'b00000;
+					R4out <= 0; R5out <= 0; MARin <= 0; Zlowin <= 0; Zhighin <= 0; DIV_signal <= 5'b00000;
 					PCin <= 0; MDRin <= 0; IRin <= 0; Yin <= 0; HIin <= 0; LOin <= 0;
-					IncPC <= 0; Read <= 0;
-					R1in <= 0; R2in <= 0; R3in <= 0; Mdatain <= 32'h00000000;
+					IncPC <= 0; Read <= 0; R4in <= 0; R5in <= 0; Mdatain <= 32'h00000000;
 				end
 				Reg_load1a: begin
-                Mdatain <= 32'h00000012;		// loading with value 18
+                Mdatain <= 32'h00000017;		// loading with value 23
                 Read = 0; MDRin = 0;
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end
             Reg_load1b: begin
-                MDRout <= 1; R2in <= 1;
-                #25 MDRout <= 0; R2in <= 0;
+                MDRout <= 1; R4in <= 1;
+                #25 MDRout <= 0; R4in <= 0;
             end
             Reg_load2a: begin
-                Mdatain <= 32'h00000014;
+                Mdatain <= 32'h00000005;		// loading with value 5 
                 Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end
             Reg_load2b: begin
-                MDRout <= 1; R3in <= 1;
-                #25 MDRout <= 0; R3in <= 0;
+                MDRout <= 1; R5in <= 1;
+                #25 MDRout <= 0; R5in <= 0;
             end
             Reg_load3a: begin
-                Mdatain <= 32'h00000018;
-                Read <= 1; MDRin <= 1;
-                #25 Read <= 0; MDRin <= 0;
+				// not necessary for this op
             end
             Reg_load3b: begin
-                MDRout <= 1; R1in <= 1;
-                #25 MDRout <= 0; R1in <= 0;
+				// not necessary for this op
             end
             T0: begin
 					PCout <= 1; MARin <= 1; IncPC <= 1; //Zlowin <= 1;
@@ -96,7 +93,7 @@ module and_32_tb;
 					#15 PCin <= 0; IncPC <= 0;
             end
             T1: begin
-                Mdatain <= 32'h28918000; // opcode for “and R1, R2, R3”
+                Mdatain <= 32'h28918000; // opcode for “or R1, R2, R3” to be placed here in the future
                 Read <= 1; MDRin <= 1;
                 #15 Read <= 0; MDRin <= 0;
             end
@@ -105,17 +102,21 @@ module and_32_tb;
                 #15 MDRout <= 0; IRin <= 0;
             end
             T3: begin
-                R2out <= 1; Yin <= 1;
-                #25 R2out <= 0; Yin <= 0;
+                R4out <= 1; Yin <= 1;
+                #25 R4out <= 0; Yin <= 0;
             end
             T4: begin
-                R3out <= 1; AND_signal <= 5'b01010; Zlowin <= 1;
-                #25 R3out <= 0; Zlowin <= 0;
+                R5out <= 1; DIV_signal <= 5'b10000; Zlowin <= 1; Zhighin <= 1;
+                #25 R5out <= 0; Zlowin <= 0; Zhighin <= 0;
             end
             T5: begin
-                Zlowout <= 1; R1in <= 1;
-                #25 Zlowout <= 0; R1in <= 0;
+                Zlowout <= 1; LOin <= 1;
+                #25 Zlowout <= 0; LOin <= 0;
             end
+				T6: begin
+					 Zhighout <= 1; HIin <= 1;
+					 #25 Zhighout <= 0; HIin <= 0;
+				end
         endcase
 		  holdstate = 0;
     end
