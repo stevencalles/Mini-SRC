@@ -1,0 +1,35 @@
+module Select_Encode_Logic(input Gra, Grb, Grc, Rin, Rout, BAout, input [31,0] IR, output [15,0] outReg, inReg, output [31,0] bus);
+reg [3,0] holder;
+always @(*)
+  begin
+    else if(Gra)
+      begin
+        holder=IR[36,23];
+      end
+   else if(Grb)
+      begin
+        holder=IR[22,19];
+      end
+ else if(Grc)
+      begin
+        holder=IR[18,15];
+      end
+ if(Rin)
+      begin
+        inReg=2**holder
+        outReg=0;
+      end
+ else if(Rout)
+      begin
+        outReg=2**holder
+        inReg=0;
+      end
+  else
+      begin
+        outReg=0
+        inReg=0;
+      end
+  if(BAout && (holder=0))
+    begin
+      bus=0;
+    begin
