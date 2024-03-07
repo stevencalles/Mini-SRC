@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Wed Mar 06 17:54:36 2024
+Thu Mar 07 10:01:40 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Mar 06 17:54:36 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Mar 07 10:01:40 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -239,7 +239,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 06 17:54:26 2024
+    Info: Processing started: Thu Mar 07 10:01:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -401,175 +401,20 @@ Info (12128): Elaborating entity "shl_32" for hierarchy "alu_32:alu|shl_32:shl_3
 Info (12128): Elaborating entity "ror_32" for hierarchy "alu_32:alu|ror_32:ror_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 29
 Info (12128): Elaborating entity "rol_32" for hierarchy "alu_32:alu|rol_32:rol_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 30
 Info (12128): Elaborating entity "mul_32" for hierarchy "alu_32:alu|mul_32:mul_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 31
-Warning (10036): Verilog HDL or VHDL warning at mul_32.v(7): object "shifted_B" assigned a value but never read File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 7
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(10): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 10
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(18): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 18
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(20): variable "prev_bit" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 20
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(21): variable "prev_bit" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 21
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(22): variable "product" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 22
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(24): variable "prev_bit" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 24
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(25): variable "product" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 25
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(29): variable "count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 29
-Warning (10230): Verilog HDL assignment warning at mul_32.v(29): truncated value with size 32 to match size of target (7) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 29
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(37): variable "product" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 37
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(38): variable "product" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 38
-Warning (10235): Verilog HDL Always Construct warning at mul_32.v(42): variable "state" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 42
-Info (10264): Verilog HDL Case Statement information at mul_32.v(10): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 10
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "product", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "count", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "prev_bit", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "HI", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Warning (10240): Verilog HDL Always Construct warning at mul_32.v(9): inferring latch(es) for variable "LO", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[0]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[1]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[2]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[3]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[4]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[5]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[6]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[7]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[8]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[9]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[10]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[11]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[12]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[13]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[14]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[15]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[16]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[17]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[18]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[19]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[20]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[21]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[22]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[23]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[24]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[25]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[26]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[27]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[28]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[29]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[30]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "LO[31]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[0]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[1]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[2]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[3]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[4]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[5]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[6]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[7]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[8]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[9]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[10]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[11]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[12]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[13]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[14]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[15]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[16]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[17]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[18]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[19]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[20]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[21]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[22]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[23]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[24]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[25]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[26]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[27]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[28]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[29]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[30]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "HI[31]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "prev_bit[1]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "state.11" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "state.10" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "state.01" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "state.00" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[0]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[1]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[2]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[3]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[4]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[5]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "count[6]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[0]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[1]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[2]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[3]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[4]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[5]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[6]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[7]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[8]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[9]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[10]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[11]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[12]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[13]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[14]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[15]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[16]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[17]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[18]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[19]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[20]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[21]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[22]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[23]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[24]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[25]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[26]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[27]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[28]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[29]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[30]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[31]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[32]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[33]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[34]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[35]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[36]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[37]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[38]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[39]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[40]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[41]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[42]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[43]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[44]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[45]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[46]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[47]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[48]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[49]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[50]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[51]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[52]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[53]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[54]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[55]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[56]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[57]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[58]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[59]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[60]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[61]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[62]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
-Info (10041): Inferred latch for "product[63]" at mul_32.v(9) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 9
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(25): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 25
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(27): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at mul_32.v(30): variable "n_a2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 30
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(31): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at mul_32.v(28): variable "a_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 28
 Info (12128): Elaborating entity "div_32" for hierarchy "alu_32:alu|div_32:div_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 32
 Info (12128): Elaborating entity "or_32" for hierarchy "alu_32:alu|or_32:or_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 33
 Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 93
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Wed Mar 06 17:54:36 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:08
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4785 megabytes
+    Info: Processing ended: Thu Mar 07 10:01:40 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +--------------------------------------------+
