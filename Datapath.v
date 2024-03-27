@@ -81,8 +81,8 @@ register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output)
 	
 	assign encoder_in = {
 								{8{1'b0}},
-								{1'b0},			// this will represent Cout eventually
-								{1'b0},	// this will represent InPortout eventually
+								Cout,			// this will represent Cout eventually
+								InPortout,	// this will represent InPortout eventually
 								MDRout,
 								PCout,
 								Zlowout,
