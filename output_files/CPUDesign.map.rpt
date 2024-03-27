@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Thu Mar 07 11:14:48 2024
+Wed Mar 27 00:21:18 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,9 +9,19 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: alu_32:alu
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "alu_32:alu|Inc_PC_32:Inc_PC_32|add_32:add_32"
+  7. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|add_32:add_32"
+  8. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32"
+  9. Port Connectivity Checks: "alu_32:alu|add_32:add_32"
+ 10. Port Connectivity Checks: "con_ff:con_ff|d_flip_flop:CON_d_ff"
+ 11. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
+ 12. Port Connectivity Checks: "register:outport"
+ 13. Port Connectivity Checks: "register:inport"
+ 14. Port Connectivity Checks: "register:MAR"
+ 15. Analysis & Elaboration Messages
+ 16. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -37,7 +47,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Failed - Thu Mar 07 11:14:48 2024           ;
+; Analysis & Elaboration Status ; Successful - Wed Mar 27 00:21:18 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -66,6 +76,41 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: alu_32:alu ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; Load           ; 00000 ; Unsigned Binary                ;
+; Loadi          ; 00001 ; Unsigned Binary                ;
+; Store          ; 00010 ; Unsigned Binary                ;
+; Addi           ; 01100 ; Unsigned Binary                ;
+; Andi           ; 01101 ; Unsigned Binary                ;
+; Ori            ; 01110 ; Unsigned Binary                ;
+; Branch         ; 10011 ; Unsigned Binary                ;
+; Jr             ; 10100 ; Unsigned Binary                ;
+; Jal            ; 10101 ; Unsigned Binary                ;
+; In             ; 10110 ; Unsigned Binary                ;
+; Out            ; 10111 ; Unsigned Binary                ;
+; Mfhi           ; 11000 ; Unsigned Binary                ;
+; Mflo           ; 11001 ; Unsigned Binary                ;
+; Add            ; 00011 ; Unsigned Binary                ;
+; Sub            ; 00100 ; Unsigned Binary                ;
+; Shr            ; 00101 ; Unsigned Binary                ;
+; Shra           ; 00110 ; Unsigned Binary                ;
+; Shl            ; 00111 ; Unsigned Binary                ;
+; Ror            ; 01000 ; Unsigned Binary                ;
+; Rol            ; 01001 ; Unsigned Binary                ;
+; And            ; 01010 ; Unsigned Binary                ;
+; Or             ; 01011 ; Unsigned Binary                ;
+; Div            ; 10000 ; Unsigned Binary                ;
+; Mul            ; 01111 ; Unsigned Binary                ;
+; Neg            ; 10001 ; Unsigned Binary                ;
+; Not            ; 10010 ; Unsigned Binary                ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -155,16 +200,108 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32:alu|Inc_PC_32:Inc_PC_32|add_32:add_32"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; B    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|add_32:add_32"               ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; B[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; B[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; Cin      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32:alu|sub_32:sub_32"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu_32:alu|add_32:add_32"                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "con_ff:con_ff|d_flip_flop:CON_d_ff"                                                                       ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; D     ; Input  ; Info     ; Stuck at GND                                                                                             ;
+; Q_bar ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "encoder_32_5:encoder_32_5" ;
++------------+-------+----------+-----------------------+
+; Port       ; Type  ; Severity ; Details               ;
++------------+-------+----------+-----------------------+
+; in[31..24] ; Input ; Info     ; Stuck at GND          ;
++------------+-------+----------+-----------------------+
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "register:outport" ;
++--------+-------+----------+------------------+
+; Port   ; Type  ; Severity ; Details          ;
++--------+-------+----------+------------------+
+; enable ; Input ; Info     ; Stuck at VCC     ;
++--------+-------+----------+------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "register:inport" ;
++--------+-------+----------+-----------------+
+; Port   ; Type  ; Severity ; Details         ;
++--------+-------+----------+-----------------+
+; enable ; Input ; Info     ; Stuck at VCC    ;
++--------+-------+----------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register:MAR"                                                                                  ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; BusMuxIn[31..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Mar 07 11:14:39 2024
+    Info: Processing started: Wed Mar 27 00:21:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file select_encode_logic.v
+    Info (12023): Found entity 1: select_encode_logic File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/select_encode_logic.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_4_to_16.v
+    Info (12023): Found entity 1: decoder_4_to_16 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/decoder_4_to_16.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_2_to_1.v
     Info (12023): Found entity 1: mux_2_1 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
@@ -211,7 +348,7 @@ Info (12021): Found 3 design units, including 3 entities, in source file add_32.
 Info (12021): Found 1 design units, including 1 entities, in source file not_32.v
     Info (12023): Found entity 1: not_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file div_32.v
-    Info (12023): Found entity 1: non_restoring_division File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 1
+    Info (12023): Found entity 1: div_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file add_32_tb.v
     Info (12023): Found entity 1: add_32_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file sub_32_tb.v
@@ -232,23 +369,64 @@ Info (12021): Found 1 design units, including 1 entities, in source file neg_32_
     Info (12023): Found entity 1: neg_32_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/neg_32_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file not_32_tb.v
     Info (12023): Found entity 1: not_32_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32_tb.v Line: 2
-Error (10161): Verilog HDL error at div_32.v(12): object "clk" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 12
-Error (10161): Verilog HDL error at div_32.v(12): object "reset" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 12
-Error (10161): Verilog HDL error at div_32.v(13): object "reset" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 13
-Error (10137): Verilog HDL Procedural Assignment error at div_32.v(20): object "A" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 20
-Error (10231): Verilog HDL error at div_32.v(20): value cannot be assigned to input "A" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 20
-Error (10137): Verilog HDL Procedural Assignment error at div_32.v(24): object "A" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 24
-Error (10231): Verilog HDL error at div_32.v(24): value cannot be assigned to input "A" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 24
-Error (10137): Verilog HDL Procedural Assignment error at div_32.v(26): object "A" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 26
-Error (10231): Verilog HDL error at div_32.v(26): value cannot be assigned to input "A" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 26
-Error (10137): Verilog HDL Procedural Assignment error at div_32.v(30): object "A" on left-hand side of assignment must have a variable data type File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 30
-Error (10231): Verilog HDL error at div_32.v(30): value cannot be assigned to input "A" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file d_flip_flop.v
+    Info (12023): Found entity 1: d_flip_flop File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file con_ff.v
+    Info (12023): Found entity 1: con_ff File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2_to_4.v
+    Info (12023): Found entity 1: decoder_2_to_4 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/decoder_2_to_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/RAM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file inc_pc_32.v
+    Info (12023): Found entity 1: Inc_PC_32 File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Inc_PC_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ld_tb.v
+    Info (12023): Found entity 1: ld_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v Line: 2
+Info (12127): Elaborating entity "Datapath" for the top level hierarchy
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 50
+Info (12128): Elaborating entity "registerMDR" for hierarchy "registerMDR:MDR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 73
+Info (12128): Elaborating entity "mux_2_1" for hierarchy "registerMDR:MDR|mux_2_1:MDMux" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 22
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:encoder_32_5" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 98
+Warning (10762): Verilog HDL Case Statement warning at encoder_32_to_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
+Info (10264): Verilog HDL Case Statement information at encoder_32_to_5.v(6): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
+Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:select_encode_logic" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 100
+Info (12128): Elaborating entity "decoder_4_to_16" for hierarchy "select_encode_logic:select_encode_logic|decoder_4_to_16:decode4to16" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/select_encode_logic.v Line: 11
+Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:con_ff" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 102
+Warning (10858): Verilog HDL warning at con_ff.v(3): object decode_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 3
+Warning (10030): Net "decode_out" at con_ff.v(3) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 3
+Info (12128): Elaborating entity "d_flip_flop" for hierarchy "con_ff:con_ff|d_flip_flop:CON_d_ff" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 19
+Warning (10235): Verilog HDL Always Construct warning at d_flip_flop.v(9): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at d_flip_flop.v(10): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v Line: 10
+Info (12128): Elaborating entity "alu_32" for hierarchy "alu_32:alu" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 104
+Info (12128): Elaborating entity "add_32" for hierarchy "alu_32:alu|add_32:add_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 34
+Info (12128): Elaborating entity "add_16" for hierarchy "alu_32:alu|add_32:add_32|add_16:a1_16" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v Line: 5
+Info (12128): Elaborating entity "add_4" for hierarchy "alu_32:alu|add_32:add_32|add_16:a1_16|add_4:a1_4" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v Line: 13
+Info (12128): Elaborating entity "sub_32" for hierarchy "alu_32:alu|sub_32:sub_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 35
+Info (12128): Elaborating entity "switch_to_neg_32" for hierarchy "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v Line: 3
+Info (12128): Elaborating entity "not_32" for hierarchy "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|not_32:not_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v Line: 5
+Info (12128): Elaborating entity "and_32" for hierarchy "alu_32:alu|and_32:and_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 37
+Info (12128): Elaborating entity "shr_32" for hierarchy "alu_32:alu|shr_32:shr_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 38
+Info (12128): Elaborating entity "shra_32" for hierarchy "alu_32:alu|shra_32:shra_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 39
+Info (12128): Elaborating entity "shl_32" for hierarchy "alu_32:alu|shl_32:shl_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 40
+Info (12128): Elaborating entity "ror_32" for hierarchy "alu_32:alu|ror_32:ror_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 41
+Info (12128): Elaborating entity "rol_32" for hierarchy "alu_32:alu|rol_32:rol_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 42
+Info (12128): Elaborating entity "mul_32" for hierarchy "alu_32:alu|mul_32:mul_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 43
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(25): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 25
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(27): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 27
+Warning (10235): Verilog HDL Always Construct warning at mul_32.v(30): variable "n_a2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 30
+Warning (10199): Verilog HDL Case Statement warning at mul_32.v(31): case item expression never matches the case expression File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at mul_32.v(28): variable "a_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 28
+Info (12128): Elaborating entity "div_32" for hierarchy "alu_32:alu|div_32:div_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 44
+Info (12128): Elaborating entity "or_32" for hierarchy "alu_32:alu|or_32:or_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 45
+Info (12128): Elaborating entity "Inc_PC_32" for hierarchy "alu_32:alu|Inc_PC_32:Inc_PC_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 47
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 106
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 114
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
-Error: Quartus Prime Analysis & Elaboration was unsuccessful. 11 errors, 1 warning
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Thu Mar 07 11:14:48 2024
-    Error: Elapsed time: 00:00:09
-    Error: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4786 megabytes
+    Info: Processing ended: Wed Mar 27 00:21:18 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
 +--------------------------------------------+

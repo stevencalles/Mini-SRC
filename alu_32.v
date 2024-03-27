@@ -28,7 +28,7 @@ module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, o
 	Not= 5'b10010;
 
 	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out, Mul_HI, Mul_LO, Div_HI, Div_LO;
-	wire Add_Cout, Sub_Cout IncPC_out;
+	wire Add_Cout, Sub_Cout;
 	
 	// different ALU operations
 	add_32 add_32(.A(A), .B(B), .Cin(1'b0), .Z(Add_out), .Cout(Add_Cout));

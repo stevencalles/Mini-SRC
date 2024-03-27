@@ -2,22 +2,21 @@ module Datapath(
 	input wire PCout,
 	input Zhighout, Zlowout, LOout, HIout,
 	input MDRout,
-	input [15:0] R0_15_out, R0_15_in,
-	input [15:0] R0_15_out_IR, R0_15_in_IR,
 	input [15:0] R_select, Rout_in,
+	input InPortout,
+	input OutPortin, InPortin,
 	input MARin, PCin, MDRin, IRin, Yin, 
 	input IncPC, 
 	input Read, Write,
-	input wire [4:0] opcode,
 	input clock, clear,
-	input [31:0] Mdatain,
 	input HIin, LOin, Zhighin, Zlowin, Cin,
-	input Cout, BAout, Gra, Grb, Grc, Rin, Rout, CONin, CONout
+	input Cout, BAout, Gra, Grb, Grc, Rin, Rout, CONin,
 	input [31:0] InPort_input,
 	output [31:0] OutPort_output
 );
 
 wire [31:0] BusMuxOut, BusMuxIn;
+wire [4:0] opcode;
 
 wire [31:0] BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2,
 BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7,
@@ -27,8 +26,13 @@ BusMuxIn_Zhigh, BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxOut_Y, BusMuxIn_
 BusMuxIn_MAR, BusMuxIn_IR, C_out_HI, C_out_LO, BusMuxIn_RAM;
 wire [31:0] BusMuxIn_And_R0;
 
-reg [15:0] R0_15_out_ENC;
-reg [15:0] R0_15_in_ENC;
+wire CONout;
+
+//reg [15:0] R0_15_out_ENC;
+//reg [15:0] R0_15_in_ENC;
+
+reg [15:0] R0_15_out, R0_15_in;
+wire [15:0] R0_15_out_IR, R0_15_in_IR;
 
 initial begin
 	R0_15_out = 16'd0;
@@ -36,9 +40,7 @@ initial begin
 end
 
 always @(*) begin
-	if (R0_15_in_IR) R0_15_in <= R0_15_in_IR
-	else R0_15_out <= R_select;
-	
+	R0_15_in <= R0_15_in_IR;
 	R0_15_out <= R0_15_out_IR;
 end
 
@@ -68,11 +70,11 @@ register LO(clock, clear, LOin, BusMuxOut, BusMuxIn_LO);
 register Zhigh(clock, clear, Zhighin, C_out_HI, BusMuxIn_Zhigh);
 register Zlow(clock, clear, Zlowin, C_out_LO, BusMuxIn_Zlow);
 register PC(clock, clear, PCin, BusMuxOut, BusMuxIn_PC);	
-registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusMuxOut(BusMuxOut), .Mdatain(Mdatain), .MDRout(BusMuxIn_MDR));
-register MAR(clock, clear, MARin, Mdatain, BusMuxIn_MAR);
+registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusMuxOut(BusMuxOut), .Mdatain(BusMuxIn_RAM), .MDRout(BusMuxIn_MDR));
+register MAR(clock, clear, MARin, BusMuxIn_RAM, BusMuxIn_MAR);
 register IR(clock, clear, IRin, BusMuxOut, BusMuxIn_IR);
-register inport(clock, clear, 1'b1, InPort_input, BusMuxIn_InPort)
-register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output)
+register inport(clock, clear, 1'b1, InPort_input, BusMuxIn_InPort);
+register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output);
 
 
 // Encoder input and output wires
@@ -95,13 +97,13 @@ register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output)
 // Instatiating 32-to-5 encoder for the bus
 encoder_32_5 encoder_32_5(encoder_in, encoder_out);
 
-select_encode_logic select_encode_logic(BusMuxIn_IR, Gra, Grb, Grc, Rin, BAout, opcode, C_sign_extended, R0_15_in_IR, R0_15_out_IR);
+select_encode_logic select_encode_logic(.IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .opcode(opcode), .C_sign_extended(C_sign_extended), .R0_15_in(R0_15_in_IR), .R0_15_out(R0_15_out_IR));
 
 con_ff con_ff(BusMuxIn_IR[20:19], BusMuxOut, CONin, CONout);
 
 alu_32 alu(.IncPC(IncPC), .A(BusMuxOut_Y), .B(BusMuxOut), .opcode(opcode), .C_out_HI(C_out_HI), .C_out_LO(C_out_LO), .branch_flag(CONout));
 
-RAM RAM(clock, Read, Write, BusMuxIn_MAR, BusMuxIn_MDR[8:0], BusMuxIn_RAM);
+RAM RAM(.clock(clock), .read(Read), .write(Write), .address(BusMuxIn_MAR[8:0]), .ram_data_in(BusMuxIn_MDR), .ram_data_out(BusMuxIn_RAM));
 
 Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMuxIn_R2), .BusMuxIn_R3(BusMuxIn_R3), 
 .BusMuxIn_R4(BusMuxIn_R4), .BusMuxIn_R5(BusMuxIn_R5), .BusMuxIn_R6(BusMuxIn_R6), 

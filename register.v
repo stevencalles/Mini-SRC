@@ -18,7 +18,7 @@ always @ (posedge clock) begin
 endmodule
 
 module registerMDR(input clock, clear, enable, read, input[31:0] BusMuxOut, Mdatain, output[31:0] MDRout);
-wire [31:0] MDRin;
-mux_2_1 MDMux(BusMuxOut, Mdatain, read, MDRin);
-register reg_MDR(clock, clear, enable, MDRin, MDRout);
+	wire [31:0] MDRin;
+	mux_2_1 MDMux(BusMuxOut, Mdatain, read, MDRin);
+	register reg_MDR(clock, clear, enable, MDRin, MDRout);
 endmodule

@@ -1,4 +1,4 @@
-module con_ff(input [1:0] IR, input [31:0] BusMuxOut, input CONin, output reg CONout);
+module con_ff(input [1:0] IR, input [31:0] BusMuxOut, input CONin, output CONout);
 
 	wire [3:0] decode_out;
 	wire eq;
