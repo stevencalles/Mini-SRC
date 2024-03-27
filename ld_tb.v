@@ -58,36 +58,36 @@ module ld_tb;
             end
             T0: begin
 					 PCout <= 1; MARin <= 1; IncPC <= 1;
-                #10 PCout <= 0;  MARin <= 0; PCin <= 1;
-					 #10 PCin <= 0; IncPC <= 0;
+                PCout <= 0;  MARin <= 0; PCin <= 1;
+					 #25 PCin <= 0; IncPC <= 0;
             end
             T1: begin
-                #10 Read <= 1; MDRin <= 1;
-                #15 Read <= 0; MDRin <= 0;
+                 Read <= 1; MDRin <= 1;
+                #25 Read <= 0; MDRin <= 0;
             end
             T2: begin
-                #10 MDRout <= 1; IRin <= 1;
-                #15 MDRout <= 0; IRin <= 0;
+                MDRout <= 1; IRin <= 1;
+                #25 MDRout <= 0; IRin <= 0;
             end
             T3: begin
-                #10 Grb <= 1; BAout <= 1; Yin <= 1;
-                #15 Grb <= 0; BAout <= 0; Yin <= 0;
+                Grb <= 1; BAout <= 1; Yin <= 1;
+                #25 Grb <= 0; BAout <= 0; Yin <= 0;
             end
             T4: begin
-                #10 Cout <= 1; Zlowin <= 1;
-                #15 Cout <= 0; Zlowin <= 0;
+                Cout <= 1; Zlowin <= 1;
+                #25 Cout <= 0; Zlowin <= 0;
             end
             T5: begin
-                #10 Zlowout <= 1; MARin <= 1;
-                #15 Zlowout <= 0; MARin <= 0;
+                Zlowout <= 1; MARin <= 1;
+                #25 Zlowout <= 0; MARin <= 0;
             end
             T6: begin
-                #10 Read <= 1; MDRin <= 1;
-                #15 Read <= 0; MDRin <= 0;
+                Read <= 1; MDRin <= 1;
+                #25 Read <= 0; MDRin <= 0;
             end
             T7: begin
-                #10 MDRout <= 1; Gra <= 1; Rin <= 1;
-                #15 MDRout <= 0; Gra <= 0; Rin <= 0;
+                MDRout <= 1; Gra <= 1; Rin <= 1;
+                #25 MDRout <= 0; Gra <= 0; Rin <= 0;
             end
         endcase
 		  holdstate = 0;

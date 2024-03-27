@@ -12,188 +12,188 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/select_encode_logic.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:31 on Mar 27,2024
+# Start time: 16:00:06 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/select_encode_logic.v 
 # -- Compiling module select_encode_logic
 # 
 # Top level modules:
 # 	select_encode_logic
-# End time: 00:21:31 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:06 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/decoder_4_to_16.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:31 on Mar 27,2024
+# Start time: 16:00:06 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/decoder_4_to_16.v 
 # -- Compiling module decoder_4_to_16
 # 
 # Top level modules:
 # 	decoder_4_to_16
-# End time: 00:21:31 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:06 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:31 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_2_to_1.v 
 # -- Compiling module mux_2_1
 # 
 # Top level modules:
 # 	mux_2_1
-# End time: 00:21:32 on Mar 27,2024, Elapsed time: 0:00:01
+# End time: 16:00:07 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:32 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v 
 # -- Compiling module Datapath
 # 
 # Top level modules:
 # 	Datapath
-# End time: 00:21:32 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:07 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:32 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v 
 # -- Compiling module register
 # -- Compiling module registerMDR
 # 
 # Top level modules:
 # 	registerMDR
-# End time: 00:21:32 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:07 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:32 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/and_32.v 
 # -- Compiling module and_32
 # 
 # Top level modules:
 # 	and_32
-# End time: 00:21:32 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:07 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:32 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v 
 # -- Compiling module alu_32
 # 
 # Top level modules:
 # 	alu_32
-# End time: 00:21:32 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:07 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:32 on Mar 27,2024
+# Start time: 16:00:07 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mux_32_to_1.v 
 # -- Compiling module Bus
 # 
 # Top level modules:
 # 	Bus
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:01
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v 
 # -- Compiling module encoder_32_5
 # 
 # Top level modules:
 # 	encoder_32_5
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v 
 # -- Compiling module mul_32
 # 
 # Top level modules:
 # 	mul_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/or_32.v 
 # -- Compiling module or_32
 # 
 # Top level modules:
 # 	or_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shra_32.v 
 # -- Compiling module shra_32
 # 
 # Top level modules:
 # 	shra_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shr_32.v 
 # -- Compiling module shr_32
 # 
 # Top level modules:
 # 	shr_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/shl_32.v 
 # -- Compiling module shl_32
 # 
 # Top level modules:
 # 	shl_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:33 on Mar 27,2024
+# Start time: 16:00:08 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ror_32.v 
 # -- Compiling module ror_32
 # 
 # Top level modules:
 # 	ror_32
-# End time: 00:21:33 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:08 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/rol_32.v 
 # -- Compiling module rol_32
 # 
 # Top level modules:
 # 	rol_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/switch_to_neg_32.v 
 # -- Compiling module switch_to_neg_32
 # 
 # Top level modules:
 # 	switch_to_neg_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/sub_32.v 
 # -- Compiling module sub_32
 # 
 # Top level modules:
 # 	sub_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/add_32.v 
 # -- Compiling module add_32
 # -- Compiling module add_16
@@ -201,83 +201,83 @@
 # 
 # Top level modules:
 # 	add_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/not_32.v 
 # -- Compiling module not_32
 # 
 # Top level modules:
 # 	not_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v 
 # -- Compiling module div_32
 # 
 # Top level modules:
 # 	div_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v 
 # -- Compiling module d_flip_flop
 # 
 # Top level modules:
 # 	d_flip_flop
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v 
 # -- Compiling module con_ff
 # 
 # Top level modules:
 # 	con_ff
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Inc_PC_32.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Inc_PC_32.v 
 # -- Compiling module Inc_PC_32
 # 
 # Top level modules:
 # 	Inc_PC_32
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC" C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v 
 # -- Compiling module ld_tb
 # 
 # Top level modules:
 # 	ld_tb
-# End time: 00:21:34 on Mar 27,2024, Elapsed time: 0:00:00
+# End time: 16:00:09 on Mar 27,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ld_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ld_tb 
-# Start time: 00:21:34 on Mar 27,2024
+# Start time: 16:00:09 on Mar 27,2024
 # Loading work.ld_tb
 # Loading work.Datapath
 # Loading work.register
@@ -319,16 +319,15 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: steve  Hostname: PC-DE-STEVEN  ProcessID: 33364
-#           Attempting to use alternate WLF file "./wlftcqerin".
+#           Attempting to use alternate WLF file "./wlft8ivafc".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftcqerin
+#           Using alternate file: ./wlft8ivafc
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
 add wave -position insertpoint sim:/ld_tb/DUT/R2/*
-add wave -position insertpoint sim:/ld_tb/DUT/RAM/*
 restart
 # ** Warning: (vsim-3017) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v(21): [TFMPC] - Too few port connections. Expected 36, found 33.
 #    Time: 0 ps  Iteration: 0  Instance: /ld_tb/DUT File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v
@@ -339,15 +338,5 @@ restart
 #    Time: 0 ps  Iteration: 0  Instance: /ld_tb/DUT/con_ff/CON_d_ff File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v
 # ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v(19): [TFMPC] - Missing connection for port 'Q_bar'.
 run 500ns
-add wave -position insertpoint sim:/ld_tb/DUT/MDR/*
-add wave -position insertpoint sim:/ld_tb/DUT/MAR/*
-restart
-# ** Warning: (vsim-3017) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v(21): [TFMPC] - Too few port connections. Expected 36, found 33.
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/DUT File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v(21): [TFMPC] - Missing connection for port 'R_select'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v(21): [TFMPC] - Missing connection for port 'Rout_in'.
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ld_tb.v(21): [TFMPC] - Missing connection for port 'OutPort_output'.
-# ** Warning: (vsim-3017) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v(19): [TFMPC] - Too few port connections. Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /ld_tb/DUT/con_ff/CON_d_ff File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v
-# ** Warning: (vsim-3722) C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v(19): [TFMPC] - Missing connection for port 'Q_bar'.
-run 500ns
+# End time: 16:03:09 on Mar 27,2024, Elapsed time: 0:03:00
+# Errors: 0, Warnings: 14

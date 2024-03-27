@@ -4,6 +4,7 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
      
      initial begin
         memory[0] <= 32'h01000095;
+		  memory[149] <= 32'h00000022;    // random number for testing
 	  end
 	  
     always @ (posedge clock) begin 

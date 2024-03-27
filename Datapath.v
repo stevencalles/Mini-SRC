@@ -71,7 +71,7 @@ register Zhigh(clock, clear, Zhighin, C_out_HI, BusMuxIn_Zhigh);
 register Zlow(clock, clear, Zlowin, C_out_LO, BusMuxIn_Zlow);
 register PC(clock, clear, PCin, BusMuxOut, BusMuxIn_PC);	
 registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusMuxOut(BusMuxOut), .Mdatain(BusMuxIn_RAM), .MDRout(BusMuxIn_MDR));
-register MAR(clock, clear, MARin, BusMuxIn_RAM, BusMuxIn_MAR);
+register MAR(clock, clear, MARin, BusMuxOut, BusMuxIn_MAR);
 register IR(clock, clear, IRin, BusMuxOut, BusMuxIn_IR);
 register inport(clock, clear, 1'b1, InPort_input, BusMuxIn_InPort);
 register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output);
