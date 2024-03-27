@@ -1,5 +1,18 @@
-module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:0] C_out_HI, C_out_LO);
+module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, output reg[31:0] C_out_HI, C_out_LO);
 	parameter 
+	Load = 5'b00000,
+	Loadi = 5'b00001,
+	Store = 5'b00010,
+	Addi = 5'b01100,
+	Andi = 5'b01101,
+	Ori = 5'b01110,
+	Branch = 5'b10011,
+	Jr = 5'b10100,
+	Jal = 5'b10101,
+	In = 5'b10110,
+	Out = 5'b10111,
+	Mfhi = 5'b11000,
+	Mflo = 5'b11001, 
 	Add= 5'b00011,		//R-Format OP codes
 	Sub= 5'b00100,
 	Shr= 5'b00101,
@@ -14,9 +27,8 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	Neg= 5'b10001,
 	Not= 5'b10010;
 
-
 	wire [31:0] Add_out, Sub_out, Shr_out, Shra_out, Shl_out, Ror_out, Rol_out, And_out, Or_out, IncPC_out, Not_out, Neg_out, Mul_HI, Mul_LO, Div_HI, Div_LO;
-	wire Add_Cout, Sub_Cout;
+	wire Add_Cout, Sub_Cout IncPC_out;
 	
 	// different ALU operations
 	add_32 add_32(.A(A), .B(B), .Cin(1'b0), .Z(Add_out), .Cout(Add_Cout));
@@ -32,6 +44,7 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 	div_32 div_32(.A(A), .M(B), .Quo(Div_LO), .R(Div_HI));
 	or_32 or_32(.A(A), .B(B), .Z(Or_out));
 	not_32 not_32(.A(B), .Z(Not_out));		//switch B to NOT B, messed up before, B gets input into this, not reg Y (or A as we're calling it)
+	Inc_PC_32 Inc_PC_32(A, IncPC, IncPC_out);
 
 	always @ (*) begin
 		case (IncPC)
@@ -41,7 +54,7 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 			end
 			1'b0: begin
 					case (opcode)
-						Add: begin
+						Add, Load, Loadi, Store, Addi: begin
 							C_out_LO <= Add_out;
 							C_out_HI <= 32'd0;
 							end
@@ -69,11 +82,11 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 							C_out_LO <= Rol_out;
 							C_out_HI <= 32'd0;
 							end
-						And: begin
+						And, Andi: begin
 							C_out_LO <= And_out;
 							C_out_HI <= 32'd0;
 							end
-						Or: begin
+						Or, Ori: begin
 							C_out_LO <= Or_out;
 							C_out_HI <= 32'd0;
 							end
@@ -91,6 +104,20 @@ module alu_32(input IncPC, input [31:0] A, B, input [4:0] opcode, output reg[31:
 							end
 						Not: begin
 							C_out_LO <= Not_out;
+							C_out_HI <= 32'd0;
+							end
+						Branch: begin
+							if (branch_flag == 1) begin
+								C_out_LO <= Add_out;
+								C_out_HI <= 32'd0;
+							end
+							else begin
+								C_out_LO <= A;
+								C_out_HI <= 32'd0;
+								end
+							end
+						default: begin
+							C_out_LO <= 32'd0;
 							C_out_HI <= 32'd0;
 							end
 				endcase

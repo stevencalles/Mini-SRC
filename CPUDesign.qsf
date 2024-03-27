@@ -165,3 +165,4 @@ set_global_assignment -name VERILOG_FILE d_flip_flop.v
 set_global_assignment -name VERILOG_FILE con_ff.v
 set_global_assignment -name VERILOG_FILE decoder_2_to_4.v
 set_global_assignment -name VERILOG_FILE RAM.v
+set_global_assignment -name VERILOG_FILE Inc_PC_32.v
