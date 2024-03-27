@@ -25,6 +25,7 @@ BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11, BusMuxIn_R12,
 BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO,
 BusMuxIn_Zhigh, BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxOut_Y, BusMuxIn_InPort, C_sign_extended,
 BusMuxIn_MAR, BusMuxIn_IR, C_out_HI, C_out_LO, BusMuxIn_RAM;
+wire [31:0] BusMuxIn_And_R0;
 
 reg [15:0] R0_15_out_ENC;
 reg [15:0] R0_15_in_ENC;
@@ -42,8 +43,9 @@ always @(*) begin
 end
 
 
+assign BusMuxIn_R0 = {32{!BAout}} & BusMuxIn_And_R0;
 //Devices
-register R0(clock, clear, R0_15_in[0], BusMuxOut, BusMuxIn_R0);
+register R0(clock, clear, R0_15_in[0], BusMuxOut, BusMuxIn_And_R0);
 register R1(clock, clear, R0_15_in[1], BusMuxOut, BusMuxIn_R1);
 register R2(clock, clear, R0_15_in[2], BusMuxOut, BusMuxIn_R2);
 register R3(clock, clear, R0_15_in[3], BusMuxOut, BusMuxIn_R3);
