@@ -57,9 +57,8 @@ module ld_tb;
                 InPort_input <= 32'd0;
             end
             T0: begin
-					 PCout <= 1; MARin <= 1; IncPC <= 1;
-                PCout <= 0;  MARin <= 0; PCin <= 1;
-					 #25 PCin <= 0; IncPC <= 0;
+					 PCout <= 1; MARin <= 1; IncPC <= 1; PCin <= 1;
+					 #25 PCin <= 0; IncPC <= 0; PCout <= 0;  MARin <= 0;
             end
             T1: begin
                  Read <= 1; MDRin <= 1;
@@ -87,7 +86,7 @@ module ld_tb;
             end
             T7: begin
                 MDRout <= 1; Gra <= 1; Rin <= 1;
-                #25 MDRout <= 0; Gra <= 0; Rin <= 0;
+                #25 MDRout <= 0; Gra <= 0; Rin <= 0; Present_state <= 0000;
             end
         endcase
 		  holdstate = 0;

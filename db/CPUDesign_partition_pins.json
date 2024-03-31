@@ -2,7 +2,376 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "OutPort_output[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[8]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[9]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[10]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[11]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[12]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[13]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[14]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[15]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[16]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[17]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[18]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[19]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[20]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[21]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[22]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[23]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[24]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[25]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[26]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[27]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[28]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[29]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[30]",
+					"strict" : false
+				},
+				{
+					"name" : "OutPort_output[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "Zhighout",
+					"strict" : false
+				},
+				{
+					"name" : "LOout",
+					"strict" : false
+				},
+				{
+					"name" : "MDRout",
+					"strict" : false
+				},
+				{
+					"name" : "Cout",
+					"strict" : false
+				},
+				{
+					"name" : "HIout",
+					"strict" : false
+				},
+				{
+					"name" : "PCout",
+					"strict" : false
+				},
+				{
+					"name" : "Zlowout",
+					"strict" : false
+				},
+				{
+					"name" : "Gra",
+					"strict" : false
+				},
+				{
+					"name" : "Grb",
+					"strict" : false
+				},
+				{
+					"name" : "Grc",
+					"strict" : false
+				},
+				{
+					"name" : "BAout",
+					"strict" : false
+				},
+				{
+					"name" : "Rout",
+					"strict" : false
+				},
+				{
+					"name" : "InPortout",
+					"strict" : false
+				},
+				{
+					"name" : "clear",
+					"strict" : false
+				},
+				{
+					"name" : "IRin",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Read",
+					"strict" : false
+				},
+				{
+					"name" : "MDRin",
+					"strict" : false
+				},
+				{
+					"name" : "PCin",
+					"strict" : false
+				},
+				{
+					"name" : "Rin",
+					"strict" : false
+				},
+				{
+					"name" : "IncPC",
+					"strict" : false
+				},
+				{
+					"name" : "Zlowin",
+					"strict" : false
+				},
+				{
+					"name" : "Zhighin",
+					"strict" : false
+				},
+				{
+					"name" : "LOin",
+					"strict" : false
+				},
+				{
+					"name" : "HIin",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[1]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[2]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[3]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[4]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[5]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[6]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[7]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[8]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[9]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[10]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[11]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[12]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[13]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[14]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[15]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[16]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[17]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[18]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[19]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[20]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[21]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[22]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[23]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[24]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[25]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[26]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[27]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[28]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[29]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[30]",
+					"strict" : false
+				},
+				{
+					"name" : "InPort_input[31]",
+					"strict" : false
+				},
+				{
+					"name" : "Write",
+					"strict" : false
+				},
+				{
+					"name" : "Yin",
+					"strict" : false
+				},
+				{
+					"name" : "MARin",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

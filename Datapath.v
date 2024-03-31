@@ -44,7 +44,6 @@ always @(*) begin
 	R0_15_out <= R0_15_out_IR;
 end
 
-
 assign BusMuxIn_R0 = {32{!BAout}} & BusMuxIn_And_R0;
 //Devices
 register R0(clock, clear, R0_15_in[0], BusMuxOut, BusMuxIn_And_R0);
@@ -69,7 +68,8 @@ register HI(clock, clear, HIin, BusMuxOut, BusMuxIn_HI);
 register LO(clock, clear, LOin, BusMuxOut, BusMuxIn_LO);
 register Zhigh(clock, clear, Zhighin, C_out_HI, BusMuxIn_Zhigh);
 register Zlow(clock, clear, Zlowin, C_out_LO, BusMuxIn_Zlow);
-register PC(clock, clear, PCin, BusMuxOut, BusMuxIn_PC);	
+pc_register PC(clock, clear, PCin, IncPC, BusMuxOut, BusMuxIn_PC);	
+//register PC(clock, clear, PCin, BusMuxOut, BusMuxIn_PC);	
 registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusMuxOut(BusMuxOut), .Mdatain(BusMuxIn_RAM), .MDRout(BusMuxIn_MDR));
 register MAR(clock, clear, MARin, BusMuxOut, BusMuxIn_MAR);
 register IR(clock, clear, IRin, BusMuxOut, BusMuxIn_IR);

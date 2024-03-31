@@ -44,7 +44,7 @@ module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, o
 	div_32 div_32(.A(A), .M(B), .Quo(Div_LO), .R(Div_HI));
 	or_32 or_32(.A(A), .B(B), .Z(Or_out));
 	not_32 not_32(.A(B), .Z(Not_out));		//switch B to NOT B, messed up before, B gets input into this, not reg Y (or A as we're calling it)
-	Inc_PC_32 Inc_PC_32(A, IncPC, IncPC_out);
+	//Inc_PC_32 Inc_PC_32(A, IncPC, IncPC_out);
 
 	always @ (*) begin
 		case (IncPC)
