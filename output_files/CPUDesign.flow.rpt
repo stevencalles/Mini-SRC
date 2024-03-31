@@ -1,5 +1,5 @@
 Flow report for CPUDesign
-Sat Mar 30 22:15:31 2024
+Sun Mar 31 01:41:46 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Mar 30 22:15:31 2024       ;
+; Flow Status                 ; Successful - Sun Mar 31 01:41:46 2024       ;
 ; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name               ; CPUDesign                                   ;
 ; Top-level Entity Name       ; Datapath                                    ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/30/2024 22:15:21 ;
+; Start date & time ; 03/31/2024 01:41:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPUDesign           ;
 +-------------------+---------------------+
@@ -73,24 +73,25 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 54991827289163.171185132038296         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 54991827289163.171186369533332         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; not_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tutorial_tb    ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ld_tb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; and_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shr_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ror_32_tb      ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ld_tb2         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; or_32_tb       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; st_tb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mul_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; rol_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; div_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sub_32_tb      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ldi_tb         ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; add_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; neg_32_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shra_32_tb     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; shl_32_tb      ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ld_tb                                  ; --            ; --          ; eda_simulation ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; st_tb                                  ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation ;
@@ -100,12 +101,13 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; and_32_tb.v                            ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; shr_32_tb.v                            ; --            ; --          ; shr_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; ror_32_tb.v                            ; --            ; --          ; ror_32_tb      ;
-; EDA_TEST_BENCH_FILE                  ; ld_tb2.v                               ; --            ; --          ; ld_tb2         ;
 ; EDA_TEST_BENCH_FILE                  ; or_32_tb.v                             ; --            ; --          ; or_32_tb       ;
+; EDA_TEST_BENCH_FILE                  ; st_tb.v                                ; --            ; --          ; st_tb          ;
 ; EDA_TEST_BENCH_FILE                  ; mul_32_tb.v                            ; --            ; --          ; mul_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; rol_32_tb.v                            ; --            ; --          ; rol_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; div_32_tb.v                            ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; sub_32_tb.v                            ; --            ; --          ; sub_32_tb      ;
+; EDA_TEST_BENCH_FILE                  ; ldi_tb.v                               ; --            ; --          ; ldi_tb         ;
 ; EDA_TEST_BENCH_FILE                  ; add_32_tb.v                            ; --            ; --          ; add_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; neg_32_tb.v                            ; --            ; --          ; neg_32_tb      ;
 ; EDA_TEST_BENCH_FILE                  ; shra_32_tb.v                           ; --            ; --          ; shra_32_tb     ;
@@ -116,12 +118,13 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; and_32_tb                              ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shr_32_tb                              ; --            ; --          ; shr_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ror_32_tb                              ; --            ; --          ; ror_32_tb      ;
-; EDA_TEST_BENCH_MODULE_NAME           ; ld_tb2                                 ; --            ; --          ; ld_tb2         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; or_32_tb                               ; --            ; --          ; or_32_tb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; st_tb                                  ; --            ; --          ; st_tb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mul_32_tb                              ; --            ; --          ; mul_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; rol_32_tb                              ; --            ; --          ; rol_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; div_32_tb                              ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; sub_32_tb                              ; --            ; --          ; sub_32_tb      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; ldi_tb                                 ; --            ; --          ; ldi_tb         ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; add_32_tb                              ; --            ; --          ; add_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; neg_32_tb                              ; --            ; --          ; neg_32_tb      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; shra_32_tb                             ; --            ; --          ; shra_32_tb     ;
@@ -141,19 +144,21 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; neg_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; not_32_tb                              ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_NAME                  ; ld_tb                                  ; --            ; --          ; eda_simulation ;
-; EDA_TEST_BENCH_NAME                  ; ld_tb2                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; ldi_tb                                 ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; st_tb                                  ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; not_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; tutorial_tb    ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; ld_tb          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; and_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; shr_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; ror_32_tb      ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; ld_tb2         ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; or_32_tb       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; st_tb          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; mul_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; rol_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; div_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; sub_32_tb      ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; ldi_tb         ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; add_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; neg_32_tb      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                 ; --            ; --          ; shra_32_tb     ;
@@ -176,8 +181,8 @@ refer to the applicable agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:12     ; 1.0                     ; 4793 MB             ; 00:00:10                           ;
-; Total                  ; 00:00:12     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4792 MB             ; 00:00:10                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:10                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

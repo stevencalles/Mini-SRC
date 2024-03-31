@@ -16,8 +16,6 @@ module ld_tb;
 	parameter Default = 4'b0000, T0 = 4'b0111, T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100, T6 = 4'b1101, T7 = 4'b1110;
 	reg [3:0] Present_state = Default;
 
-//	datapath DUT(Clock, Reset, Read, Write, IncPC, PCin, Zin, MDRin, MARin, Yin, HIin, LOin, IRin, OutPortin, PCout, Zhighout, Zlowout, HIout, LOout, MDRout, InPortout, Cout, BAout, CONin, Gra, Grb, Grc, Rin, Rout, InPort_input);
-	
 	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .BAout(BAout), .CONin(CONin), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .InPort_input(InPort_input),
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), .Write(Write),
 	.clock(clock), .clear(clear), .HIin(HIin), .InPortout(InPortout), .Cout(Cout),
@@ -27,6 +25,7 @@ module ld_tb;
 	initial
 		begin
 			clock = 0;
+			DUT.PC.BusMuxIn = 32'd0;
 			forever #10 clock = ~clock;
 		end
 	

@@ -16,8 +16,6 @@ module st_tb;
 	parameter Default = 4'b0000, T0 = 4'b0111, T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100, T6 = 4'b1101, T7 = 4'b1110;
 	reg [3:0] Present_state = Default;
 
-//	datapath DUT(Clock, Reset, Read, Write, IncPC, PCin, Zin, MDRin, MARin, Yin, HIin, LOin, IRin, OutPortin, PCout, Zhighout, Zlowout, HIout, LOout, MDRout, InPortout, Cout, BAout, CONin, Gra, Grb, Grc, Rin, Rout, InPort_input);
-	
 	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .BAout(BAout), .CONin(CONin), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .InPort_input(InPort_input),
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), .Write(Write),
 	.clock(clock), .clear(clear), .HIin(HIin), .InPortout(InPortout), .Cout(Cout),
@@ -26,8 +24,9 @@ module st_tb;
 	
 	initial
 		begin
-			DUT.R2.BusMuxIn = 32'd20;
 			clock = 0;
+			DUT.PC.BusMuxIn = 32'd4;
+			DUT.R1.BusMuxIn = 32'h43;
 			forever #10 clock = ~clock;
 		end
 	
@@ -58,9 +57,8 @@ module st_tb;
                 InPort_input <= 32'd0;
             end
             T0: begin
-					 PCout <= 1; MARin <= 1; IncPC <= 1;
-                PCout <= 0;  MARin <= 0; PCin <= 1;
-					 #25 PCin <= 0; IncPC <= 0;
+					 PCout <= 1; MARin <= 1; IncPC <= 1; PCin <= 1;
+					 #25 PCin <= 0; IncPC <= 0; PCout <= 0;  MARin <= 0;
             end
             T1: begin
                  Read <= 1; MDRin <= 1;
@@ -83,12 +81,12 @@ module st_tb;
                 #25 Zlowout <= 0; MARin <= 0;
             end
             T6: begin
-                Read <= 1; MDRin <= 1;
-                #25 Read <= 0; MDRin <= 0;
+                Rout <= 1; MDRin <= 1; Gra <= 1;
+                #25 Rout <= 0; MDRin <= 0; Gra <= 0;
             end
             T7: begin
-                MDRout <= 1; Gra <= 1; Rin <= 1;
-                #25 MDRout <= 0; Gra <= 0; Rin <= 0; Present_state <= 0000;
+                MDRout <= 1; Write <= 1; 
+                #25 MDRout <= 0; Write <= 0; Present_state <= 0000;
             end
         endcase
 		  holdstate = 0;
