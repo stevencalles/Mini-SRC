@@ -54,7 +54,7 @@ module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, o
 			end
 			1'b0: begin
 					case (opcode)
-						Add, Load, Loadi, Store, Addi: begin
+						Add, Load, Loadi, Store, Addi, Jr, Jal: begin
 							C_out_LO <= Add_out;
 							C_out_HI <= 32'd0;
 							end

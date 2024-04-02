@@ -10,7 +10,7 @@ module Datapath(
 	input Read, Write,
 	input clock, clear,
 	input HIin, LOin, Zhighin, Zlowin, Cin,
-	input Cout, BAout, Gra, Grb, Grc, Rin, Rout, CONin,
+	input Cout, BAout, Gra, Grb, Grc, Rin, Rout, CONin, JAL_flag,
 	input [31:0] InPort_input,
 	output [31:0] OutPort_output
 );
@@ -61,7 +61,7 @@ register R11(clock, clear, R0_15_in[11], BusMuxOut, BusMuxIn_R11);
 register R12(clock, clear, R0_15_in[12], BusMuxOut, BusMuxIn_R12);
 register R13(clock, clear, R0_15_in[13], BusMuxOut, BusMuxIn_R13);
 register R14(clock, clear, R0_15_in[14], BusMuxOut, BusMuxIn_R14);
-register R15(clock, clear, R0_15_in[15], BusMuxOut, BusMuxIn_R15);
+register R15(clock, clear, R0_15_in[15]|JAL_flag, BusMuxOut, BusMuxIn_R15);
 
 register Y(clock, clear, Yin, BusMuxOut, BusMuxOut_Y);
 register HI(clock, clear, HIin, BusMuxOut, BusMuxIn_HI);

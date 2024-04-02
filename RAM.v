@@ -21,12 +21,24 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
 		memory[10] = 32'h9a88000e; // brnz R5, 14
 		memory[11] = 32'h9a90000e; // brpl R5, 14
 		memory[12] = 32'h9a98000e; // brmi R5, 14
-			
+		
+		memory[13] = 32'ha3000000;	// jr R6
+		memory[14] = 32'hab000000; // jal R6
+		
+	
+
+
+
+	
 		memory[24] = 32'h00000000;		// location just to show that there is something here for branch instr
 		memory[23] = 32'h00000000;		// location just to show that there is something here for branch instr
 		memory[25] = 32'h00000000;		// location just to show that there is something here for branch instr
 		memory[26] = 32'h00000000;		// location just to show that there is something here for branch instr
 
+		memory[27] = 32'h00000000;	// spot where jr R6 takes you
+		memory[28] = 32'h00000000; // spot where jal takes you
+		
+	
 		
 		memory[90] = 32'h00000012;	// random val for second load test
 		memory[149] = 32'h00000022; // random value for first load test
