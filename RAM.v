@@ -13,6 +13,12 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
 		memory[4] = 32'h10800087;	// st 0x87, R1
 		memory[5] = 32'h10880087;	// st 0x87(R1), R1
 		
+		memory[6] = 32'h61a7fffb; // addi R3, R4, -5
+		memory[7] = 32'h69a00053; // andi R3, R4, 0x53
+		memory[8] = 32'h71a00053; // ori R3, R4, 0x53
+		
+	
+		
 		memory[90] = 32'h00000012;	// random val for second load test
 		memory[149] = 32'h00000022; // random value for first ld test
 		

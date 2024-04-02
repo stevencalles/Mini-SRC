@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Tue Apr 02 12:21:15 2024
+Tue Apr 02 14:20:56 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Apr 02 12:21:15 2024       ;
+; Analysis & Elaboration Status ; Successful - Tue Apr 02 14:20:56 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -283,7 +283,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Apr 02 12:21:05 2024
+    Info: Processing started: Tue Apr 02 14:20:45 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -375,6 +375,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file ldi_tb.
     Info (12023): Found entity 1: ldi_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ldi_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file st_tb.v
     Info (12023): Found entity 1: st_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/st_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file addi_tb.v
+    Info (12023): Found entity 1: addi_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/addi_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file andi_tb.v
+    Info (12023): Found entity 1: andi_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/andi_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file ori_tb.v
+    Info (12023): Found entity 1: ori_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ori_tb.v Line: 2
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 49
 Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 71
@@ -419,10 +425,10 @@ Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/st
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Tue Apr 02 12:21:15 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4791 megabytes
+    Info: Processing ended: Tue Apr 02 14:20:56 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +--------------------------------------------+
