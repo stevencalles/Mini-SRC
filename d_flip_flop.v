@@ -1,13 +1,12 @@
-module d_flip_flop(input wire clk, input wire D, output reg Q, output reg Q_bar);
-
+module d_flip_flop(input clk, input D, output reg Q);
+	
 	initial begin
 		Q <= 0;
-		Q_bar <= 1;
 	end
+	
 	always @(clk)
 	begin
 		Q <= D;
-		Q_bar <= !D;
 	end
 	
 endmodule 

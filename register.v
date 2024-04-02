@@ -28,6 +28,7 @@ module pc_register(
 	input	wire clear,
 	input wire enable,
 	input wire IncPC,
+	input wire branch_flag,
 	input wire [31:0] BusMuxOut,
 	output reg [31:0] BusMuxIn);
 	
@@ -40,7 +41,7 @@ module pc_register(
 				BusMuxIn <= BusMuxIn + 1;
 			end
 			else if (enable) begin
-				BusMuxIn <= BusMuxIn;
+				BusMuxIn <= BusMuxOut;
 			end
 		end
 endmodule 

@@ -17,10 +17,19 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
 		memory[7] = 32'h69a00053; // andi R3, R4, 0x53
 		memory[8] = 32'h71a00053; // ori R3, R4, 0x53
 		
-	
+		memory[9] = 32'h9a80000e; // brzr R5, 14
+		memory[10] = 32'h9a88000e; // brnz R5, 14
+		memory[11] = 32'h9a90000e; // brpl R5, 14
+		memory[12] = 32'h9a98000e; // brmi R5, 14
+			
+		memory[24] = 32'h00000000;		// location just to show that there is something here for branch instr
+		memory[23] = 32'h00000000;		// location just to show that there is something here for branch instr
+		memory[25] = 32'h00000000;		// location just to show that there is something here for branch instr
+		memory[26] = 32'h00000000;		// location just to show that there is something here for branch instr
+
 		
 		memory[90] = 32'h00000012;	// random val for second load test
-		memory[149] = 32'h00000022; // random value for first ld test
+		memory[149] = 32'h00000022; // random value for first load test
 		
      end
 	  

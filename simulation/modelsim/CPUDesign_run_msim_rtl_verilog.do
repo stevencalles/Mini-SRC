@@ -28,11 +28,12 @@ vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/
 vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/div_32.v}
 vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v}
 vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v}
+vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/decoder_2_to_4.v}
 vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/RAM.v}
 
-vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/ori_tb.v}
+vlog -vlog01compat -work work +incdir+C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC {C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/branch_tb.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ori_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  branch_tb
 
 add wave *
 view structure

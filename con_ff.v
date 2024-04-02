@@ -13,6 +13,7 @@ module con_ff(input [1:0] IR, input [31:0] BusMuxOut, input CONin, output CONout
 	assign neg = (BusMuxOut[31] == 1) ? 1'b1 : 1'b0;
 	
 	// call 2-4 decoder here with IR as input and decode_out as output
+	decoder_2_to_4 dec_2to4(IR, decode_out);
 	
 	assign br_flag = (decode_out[0] & eq | decode_out[1] & not_eq | decode_out[2] & pos | decode_out[3] & neg);
 	

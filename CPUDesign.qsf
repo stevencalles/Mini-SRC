@@ -181,8 +181,11 @@ set_global_assignment -name EDA_TEST_BENCH_NAME ori_tb -section_id eda_simulatio
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ori_tb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id ori_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ori_tb -section_id ori_tb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE branch_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME branch_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id branch_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id branch_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME branch_tb -section_id branch_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE tutorial_tb.v -section_id tutorial_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE and_32_tb.v -section_id and_32_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mul_32_tb.v -section_id mul_32_tb
@@ -203,8 +206,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE st_tb.v -section_id st_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE addi_tb.v -section_id addi_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE andi_tb.v -section_id andi_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ori_tb.v -section_id ori_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME branch_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id branch_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id branch_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME branch_tb -section_id branch_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE branch_tb.v -section_id branch_tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

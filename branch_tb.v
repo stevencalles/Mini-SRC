@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module ori_tb;
+module branch_tb;
 	 
 	reg clock, clear, PCout, Zlowout, MDRout, Zhighout;
 	reg MARin, PCin, MDRin, IRin, Yin, InPortin, OutPortin;
@@ -25,8 +25,10 @@ module ori_tb;
 	initial
 		begin
 			clock = 0;
-			DUT.PC.BusMuxIn = 32'd8;
-			DUT.R4.BusMuxIn = 32'b01011111;
+			DUT.PC.BusMuxIn = 32'd12;	// change this based on which branch they want
+			//DUT.R5.BusMuxIn = 32'd5;	// r5 loaded with 5
+			//DUT.R5.BusMuxIn = 32'd0;	// r5 loaded with 0
+			DUT.R5.BusMuxIn = 32'hFFFFFFFB;	// r5 loaded with -5
 			forever #10 clock = ~clock;
 		end
 	
@@ -68,16 +70,20 @@ module ori_tb;
                 #25 MDRout <= 0; IRin <= 0;
             end
             T3: begin
-                Grb <= 1; Rout <= 1; Yin <= 1;
-                #25 Grb <= 0; Rout <= 0; Yin <= 0;
+                Gra <= 1; Rout <= 1; CONin <= 1;
+                #25 Gra <= 0; Rout <= 0; CONin <= 0;
             end
             T4: begin
-                Cout <= 1; Zlowin <= 1;
-                #25 Cout <= 0; Zlowin <= 0;
+                PCout <= 1; Yin <= 1;
+                #25 PCout <= 0; Yin <= 0;
             end
             T5: begin
-                Zlowout <= 1; Rin <= 1; Gra <= 1;
-                #25 Zlowout <= 0; Rin <= 0; Gra <= 0;
+                Cout <= 1; Zlowin <= 1; 
+                #25 Cout <= 0; Zlowin <= 0; 
+            end
+				T6: begin
+                Zlowout <= 1; PCin <= 1; 
+                #25 Zlowout <= 0; PCin <= 0;
             end
         endcase
 		  holdstate = 0;

@@ -107,7 +107,7 @@ module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, o
 							C_out_HI <= 32'd0;
 							end
 						Branch: begin
-							if (branch_flag == 1) begin
+							if (branch_flag) begin
 								C_out_LO <= Add_out;
 								C_out_HI <= 32'd0;
 							end
