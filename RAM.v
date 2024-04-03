@@ -25,7 +25,11 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
 		memory[13] = 32'ha3000000;	// jr R6
 		memory[14] = 32'hab000000; // jal R6
 		
-	
+		memory[15] = 32'hc3000000; // mfhi R6
+		memory[16] = 32'hcb800000; // mflo R7
+		
+		memory[17] = 32'hb9800000; // out R3
+		memory[18] = 32'hb2000000; // in R4
 
 
 

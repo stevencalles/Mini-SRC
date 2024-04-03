@@ -73,7 +73,7 @@ registerMDR MDR(.clock(clock), .clear(clear), .enable(MDRin), .read(Read), .BusM
 register MAR(clock, clear, MARin, BusMuxOut, BusMuxIn_MAR);
 register IR(clock, clear, IRin, BusMuxOut, BusMuxIn_IR);
 register inport(clock, clear, 1'b1, InPort_input, BusMuxIn_InPort);
-register outport(clock, clear, 1'b1, BusMuxOut,  OutPort_output);
+register outport(clock, clear, OutPortin, BusMuxOut, OutPort_output);
 
 
 // Encoder input and output wires

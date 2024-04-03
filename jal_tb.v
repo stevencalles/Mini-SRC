@@ -26,7 +26,7 @@ module jal_tb;
 	initial
 		begin
 			clock = 0;
-			DUT.PC.BusMuxIn = 32'd14;	// change this based on which branch they want
+			DUT.PC.BusMuxIn = 32'd14;	
 			DUT.R6.BusMuxIn = 32'd28;	
 			forever #10 clock = ~clock;
 		end

@@ -10,3 +10,5 @@ module div_32(input [31:0] A, M, output reg [31:0] Quo, R);
 			end
 		end
 endmodule 
+
+// this was an incorrect implementation, we had to use one of the division algorithms shown in class

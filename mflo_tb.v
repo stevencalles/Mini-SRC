@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module jr_tb;
+module mflo_tb;
 	 
 	reg clock, clear, PCout, Zlowout, MDRout, Zhighout;
 	reg MARin, PCin, MDRin, IRin, Yin, InPortin, OutPortin;
@@ -9,6 +9,7 @@ module jr_tb;
 	reg IncPC, Read, Write, Rin, Rout;
 	reg Gra, Grb, Grc, CONin;
 	reg holdstate = 0;
+	reg JAL_flag;
 
 	wire [31:0] OutPort_out;
 	reg [31:0] InPort_input;
@@ -19,14 +20,14 @@ module jr_tb;
 	Datapath DUT(.PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .BAout(BAout), .CONin(CONin), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .InPort_input(InPort_input),
 	.MARin(MARin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .IncPC(IncPC), .Read(Read), .Write(Write),
 	.clock(clock), .clear(clear), .HIin(HIin), .InPortout(InPortout), .Cout(Cout),
-	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin), .LOout(LOout), .HIout(HIout), .OutPortin(OutPortin), .InPortin(InPortin));
+	.LOin(LOin), .Zhighin(Zhighin), .Zlowin(Zlowin), .Cin(Cin), .LOout(LOout), .HIout(HIout), .OutPortin(OutPortin), .InPortin(InPortin), .JAL_flag(JAL_flag));
 	
 	
 	initial
 		begin
 			clock = 0;
-			DUT.PC.BusMuxIn = 32'd13;	
-			DUT.R6.BusMuxIn = 32'd27;	
+			DUT.PC.BusMuxIn = 32'd16;	
+			DUT.LO.BusMuxIn = 32'd30;	
 			forever #10 clock = ~clock;
 		end
 	
@@ -49,7 +50,7 @@ module jr_tb;
                 PCout <= 0; Zlowout <= 0; Zhighout <= 0; MDRout <= 0; InPortout <= 0; HIout <= 0; LOout <= 0; BAout <= 0;
                 PCin <= 0; Zlowin <= 0; MDRin <= 0; MARin <= 0; InPortin <= 0; OutPortin <= 0; HIin <= 0; LOin <= 0; IRin <= 0; Yin <= 0;
                 Gra <= 0; Grb <= 0; Grc <= 0; CONin <= 0; Rin <= 0; Rout <= 0;
-                IncPC <= 0; Read <= 0; Write <= 0; Cout <= 0;
+                IncPC <= 0; Read <= 0; Write <= 0; Cout <= 0; JAL_flag <= 0;
                 InPort_input <= 32'd0;
             end
             T0: begin
@@ -57,7 +58,7 @@ module jr_tb;
 					 #25 PCin <= 0; IncPC <= 0; PCout <= 0;  MARin <= 0;
             end
             T1: begin
-                 Read <= 1; MDRin <= 1;
+                Read <= 1; MDRin <= 1;
                 #25 Read <= 0; MDRin <= 0;
             end
             T2: begin
@@ -65,8 +66,8 @@ module jr_tb;
                 #25 MDRout <= 0; IRin <= 0;
             end
             T3: begin
-                Gra <= 1; Rout <= 1; PCin <= 1;
-                #25 Gra <= 0; Rout <= 0; PCin <= 0;
+                Rin <= 1; LOout <= 1; Gra <= 1;
+                #25 Rin <= 0; LOout <= 0; Gra <= 0;
             end
         endcase
 		  holdstate = 0;
