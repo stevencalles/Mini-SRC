@@ -1,0 +1,5 @@
+module control_tb;
+	reg clock, clear, stop;
+	
+	wire [31:0] OutPort_output;
+	reg [31:0] InPort_input;

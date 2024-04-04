@@ -23,25 +23,29 @@ module registerMDR(input clock, clear, enable, read, input[31:0] BusMuxOut, Mdat
 	register reg_MDR(clock, clear, enable, MDRin, MDRout);
 endmodule
 
-module pc_register(
+module pc_register #(parameter INIT = 32'h0)(
 	input wire clock,
 	input	wire clear,
 	input wire enable,
 	input wire IncPC,
 	input wire branch_flag,
 	input wire [31:0] BusMuxOut,
-	output reg [31:0] BusMuxIn);
+	output wire [31:0] BusMuxIn);
+	
+	reg [31:0] temp;
+	initial temp = INIT;
 	
 	always @ (posedge clock) 
 		begin
 			if (clear) begin
-				BusMuxIn <= 0;
+				temp <= 0;
 			end
 			else if (IncPC) begin
-				BusMuxIn <= BusMuxIn + 1;
+				temp <= BusMuxIn + 1;
 			end
 			else if (enable) begin
-				BusMuxIn <= BusMuxOut;
+				temp <= BusMuxOut;
 			end
 		end
+	assign BusMuxIn = temp;
 endmodule 

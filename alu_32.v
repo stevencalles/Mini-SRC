@@ -13,7 +13,7 @@ module alu_32(input IncPC, branch_flag, input [31:0] A, B, input [4:0] opcode, o
 	Out = 5'b10111,
 	Mfhi = 5'b11000,
 	Mflo = 5'b11001, 
-	Add= 5'b00011,		//R-Format OP codes
+	Add= 5'b00011,		
 	Sub= 5'b00100,
 	Shr= 5'b00101,
 	Shra= 5'b00110,

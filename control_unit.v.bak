@@ -1,0 +1,3 @@
+module control_unit(output reg Gra, Grb, Grc, Rin, Rout, CONin, Run,
+							
+							input clock, clear, reset, stop, );

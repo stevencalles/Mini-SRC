@@ -1,19 +1,12 @@
 module Datapath(
-	input wire PCout,
-	input Zhighout, Zlowout, LOout, HIout,
-	input MDRout,
-	input [15:0] R_select, Rout_in,
-	input InPortout,
-	input OutPortin, InPortin,
-	input MARin, PCin, MDRin, IRin, Yin, 
-	input IncPC, 
-	input Read, Write,
-	input clock, clear,
-	input HIin, LOin, Zhighin, Zlowin, Cin,
-	input Cout, BAout, Gra, Grb, Grc, Rin, Rout, CONin, JAL_flag,
+	input clock, clear, stop,
 	input [31:0] InPort_input,
 	output [31:0] OutPort_output
 );
+
+wire Gra, Grb, Grc, Rin, Rout, CONin, BAout, PCout, Zhighout, Zlowout, MDRout, MDRin, MARin, IRin, PCin, InPortout, 
+OutPortin, InPortin, OutPortout, Yin, HIin, LOin, Cout, Zhighin, Zlowin, LOout, HIout, JAL_flag,
+Read, Write, IncPC, Run;
 
 wire [31:0] BusMuxOut, BusMuxIn;
 wire [4:0] opcode;
@@ -27,9 +20,6 @@ BusMuxIn_MAR, BusMuxIn_IR, C_out_HI, C_out_LO, BusMuxIn_RAM;
 wire [31:0] BusMuxIn_And_R0;
 
 wire CONout;
-
-//reg [15:0] R0_15_out_ENC;
-//reg [15:0] R0_15_in_ENC;
 
 reg [15:0] R0_15_out, R0_15_in;
 wire [15:0] R0_15_out_IR, R0_15_in_IR;
@@ -111,5 +101,10 @@ Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMu
 .BusMuxIn_R14(BusMuxIn_R14), .BusMuxIn_R15(BusMuxIn_R15), .BusMuxIn_HI(BusMuxIn_HI), .BusMuxIn_LO(BusMuxIn_LO), .BusMuxIn_Zhigh(BusMuxIn_Zhigh), 
 .BusMuxIn_Zlow(BusMuxIn_Zlow), .BusMuxIn_PC(BusMuxIn_PC), 
 .BusMuxIn_MDR(BusMuxIn_MDR), .BusMuxIn_InPort(BusMuxIn_InPort), .C_sign_extended(C_sign_extended), .select_sig(encoder_out), .BusMuxOut(BusMuxOut));
+
+control_unit control(.clock(clock), .clear(clear), .stop(stop), .Run(Run), .IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin),
+.Rout(Rout), .CONin(CONin), .BAout(BAout), .PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .MARin(MARin), .IRin(IRin), 
+.PCin(PCin), .InPortout(InPortout), .OutPortin(OutPortin), .InPortin(InPortin), .OutPortout(OutPortout), .Yin(Yin), .HIin(HIin), .LOin(LOin), 
+.Cout(Cout), .Zhighin(Zhighin), .Zlowin(Zlowin), .LOout(LOout), .HIout(HIout), .JAL_flag(JAL_flag), .Read(Read), .Write(Write), .IncPC(IncPC), .MDRin(MDRin));
 
 endmodule 
