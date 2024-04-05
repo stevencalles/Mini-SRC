@@ -98,6 +98,9 @@ module RAM(input clock, read, write, input [8:0] address, input [31:0] ram_data_
 		memory[164] = 32'h24cc0000; // sub r9, r9, r8
 		memory[165] = 32'ha7800000; // jr r15
 		
+		memory[71] = 32'h00000094; // value for ld r1, 0x47
+		memory[142] = 32'h00000034; // value for ld r0, 7(r1)
+		
      end
       
     always @ (posedge clock) begin 

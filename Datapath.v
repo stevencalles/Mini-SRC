@@ -24,6 +24,11 @@ wire CONout;
 reg [15:0] R0_15_out, R0_15_in;
 wire [15:0] R0_15_out_IR, R0_15_in_IR;
 
+control_unit control(.clock(clock), .clear(clear), .stop(stop), .Run(Run), .IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin),
+.Rout(Rout), .CONin(CONin), .BAout(BAout), .PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .MARin(MARin), .IRin(IRin), 
+.PCin(PCin), .InPortout(InPortout), .OutPortin(OutPortin), .InPortin(InPortin), .OutPortout(OutPortout), .Yin(Yin), .HIin(HIin), .LOin(LOin), 
+.Cout(Cout), .Zhighin(Zhighin), .Zlowin(Zlowin), .LOout(LOout), .HIout(HIout), .JAL_flag(JAL_flag), .Read(Read), .Write(Write), .IncPC(IncPC), .MDRin(MDRin));
+
 initial begin
 	R0_15_out = 16'd0;
 	R0_15_in = 16'd0;
@@ -86,7 +91,8 @@ register outport(clock, clear, OutPortin, BusMuxOut, OutPort_output);
 // Instatiating 32-to-5 encoder for the bus
 encoder_32_5 encoder_32_5(encoder_in, encoder_out);
 
-select_encode_logic select_encode_logic(.IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .opcode(opcode), .C_sign_extended(C_sign_extended), .R0_15_in(R0_15_in_IR), .R0_15_out(R0_15_out_IR));
+select_encode_logic select_encode_logic(.IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .opcode(opcode), .C_sign_extended(C_sign_extended), 
+.R0_15_in(R0_15_in_IR), .R0_15_out(R0_15_out_IR));
 
 con_ff con_ff(BusMuxIn_IR[20:19], BusMuxOut, CONin, CONout);
 
@@ -101,10 +107,4 @@ Bus bus(.BusMuxIn_R0(BusMuxIn_R0), .BusMuxIn_R1(BusMuxIn_R1), .BusMuxIn_R2(BusMu
 .BusMuxIn_R14(BusMuxIn_R14), .BusMuxIn_R15(BusMuxIn_R15), .BusMuxIn_HI(BusMuxIn_HI), .BusMuxIn_LO(BusMuxIn_LO), .BusMuxIn_Zhigh(BusMuxIn_Zhigh), 
 .BusMuxIn_Zlow(BusMuxIn_Zlow), .BusMuxIn_PC(BusMuxIn_PC), 
 .BusMuxIn_MDR(BusMuxIn_MDR), .BusMuxIn_InPort(BusMuxIn_InPort), .C_sign_extended(C_sign_extended), .select_sig(encoder_out), .BusMuxOut(BusMuxOut));
-
-control_unit control(.clock(clock), .clear(clear), .stop(stop), .Run(Run), .IR(BusMuxIn_IR), .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin),
-.Rout(Rout), .CONin(CONin), .BAout(BAout), .PCout(PCout), .Zhighout(Zhighout), .Zlowout(Zlowout), .MDRout(MDRout), .MARin(MARin), .IRin(IRin), 
-.PCin(PCin), .InPortout(InPortout), .OutPortin(OutPortin), .InPortin(InPortin), .OutPortout(OutPortout), .Yin(Yin), .HIin(HIin), .LOin(LOin), 
-.Cout(Cout), .Zhighin(Zhighin), .Zlowin(Zlowin), .LOout(LOout), .HIout(HIout), .JAL_flag(JAL_flag), .Read(Read), .Write(Write), .IncPC(IncPC), .MDRin(MDRin));
-
 endmodule 

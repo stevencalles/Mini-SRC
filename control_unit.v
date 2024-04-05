@@ -1,4 +1,5 @@
 `timescale 1ns/10ps
+// for some reason our states weren't holding long enough and timing was off, but this main structure is correct
 module control_unit(output reg Gra, Grb, Grc, Rin, Rout, CONin, BAout,
 							PCout, Zhighout, Zlowout, MDRout, MDRin, MARin, IRin, PCin, InPortout, OutPortin, InPortin, OutPortout,
 							Yin, HIin, LOin, Cout, Zhighin, Zlowin, LOout, HIout, JAL_flag, Run,
@@ -69,6 +70,7 @@ module control_unit(output reg Gra, Grb, Grc, Rin, Rout, CONin, BAout,
 						Mflo: Present_state = _mflo;
 						Nop: Present_state = _nop;
 						Halt: Present_state = _halt;
+						default: Present_state = Reset_state;
 					endcase
 				end	// end T2
 			
@@ -190,168 +192,168 @@ module control_unit(output reg Gra, Grb, Grc, Rin, Rout, CONin, BAout,
 			end
 			T0: begin
 				 PCout <= 1; MARin <= 1; IncPC <= 1; PCin <= 1;
-				 #25 PCin <= 0; IncPC <= 0; PCout <= 0;  MARin <= 0;
+				 #20 PCin <= 0; IncPC <= 0; PCout <= 0;  MARin <= 0;
          end
 			T1: begin
 				 Read <= 1; MDRin <= 1;
-				 #25 Read <= 0; MDRin <= 0;
+				 #20 Read <= 0; MDRin <= 0;
 			end
 			T2: begin
 				 MDRout <= 1; IRin <= 1;
-				 #25 MDRout <= 0; IRin <= 0;
+				 #20 MDRout <= 0; IRin <= 0;
 			end	
 	/*===============================*/
 			add3, sub3, or3, and3, shr3, shl3, shra3, ror3, rol3: begin
 				Grb <= 1; Rout <= 1; Yin <= 1;
-				#25 Grb <= 0; Rout <= 0; Yin <= 0;
+				#20 Grb <= 0; Rout <= 0; Yin <= 0;
 			end
 			add4, sub4, or4, and4, shr4, shl4, shra4, ror4, rol4: begin
 				Grc <= 1; Rout <= 1; Zlowin <= 1;
-				#25 Grc <= 0; Rout <= 0; Zlowin <= 0;
+				#20 Grc <= 0; Rout <= 0; Zlowin <= 0;
 			end
 			add5, sub5, or5, and5, shr5, shl5, shra5, ror5, rol5: begin
 				Zlowout <= 1; Rin <= 1; Gra <= 1;
-				#25 Zlowout <= 0; Rin <= 0; Gra <= 0;
+				#20 Zlowout <= 0; Rin <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			mul3, div3: begin
 				Gra <= 1; Rout <= 1; Yin <= 1;
-				#25 Gra <= 0; Rout <= 0; Yin <= 0;
+				#20 Gra <= 0; Rout <= 0; Yin <= 0;
 			end
 			mul4, div4: begin
 				Grb <= 1; Rout <= 1; Zlowin <= 1; Zhighin <= 1;
-				#25 Grb <= 0; Rout <= 0; Zlowin <= 0; Zhighin <= 0;
+				#20 Grb <= 0; Rout <= 0; Zlowin <= 0; Zhighin <= 0;
 			end
 			mul5, div5: begin
 				Zlowout <= 1; LOin <= 1;
-            #25 Zlowout <= 0; LOin <= 0;
+            #20 Zlowout <= 0; LOin <= 0;
 			end
 			mul6, div6: begin
 				Zhighout <= 1; HIin <= 1;
-				#25 Zhighout <= 0; HIin <= 0;
+				#20 Zhighout <= 0; HIin <= 0;
 			end
 	/*===============================*/
 			addi3, ori3, andi3: begin
 				 Grb <= 1; Rout <= 1; Yin <= 1;
-				 #25 Grb <= 0; Rout <= 0; Yin <= 0;
+				 #20 Grb <= 0; Rout <= 0; Yin <= 0;
 			end
 			addi4, ori4, andi4: begin
 				 Cout <= 1; Zlowin <= 1;
-				 #25 Cout <= 0; Zlowin <= 0;
+				 #20 Cout <= 0; Zlowin <= 0;
 			end
 			addi5, ori5, andi5: begin
 				 Zlowout <= 1; Rin <= 1; Gra <= 1;
-				 #25 Zlowout <= 0; Rin <= 0; Gra <= 0;
+				 #20 Zlowout <= 0; Rin <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			ld3: begin
 				 Grb <= 1; BAout <= 1; Yin <= 1;
-				 #25 Grb <= 0; BAout <= 0; Yin <= 0;
+				 #20 Grb <= 0; BAout <= 0; Yin <= 0;
             end
 			ld4: begin
 				 Cout <= 1; Zlowin <= 1;
-				 #25 Cout <= 0; Zlowin <= 0;
+				 #20 Cout <= 0; Zlowin <= 0;
 			end
 			ld5: begin
 				 Zlowout <= 1; MARin <= 1;
-				 #25 Zlowout <= 0; MARin <= 0;
+				 #20 Zlowout <= 0; MARin <= 0;
 			end
 			ld6: begin
 				 Read <= 1; MDRin <= 1;
-				 #25 Read <= 0; MDRin <= 0;
+				 #20 Read <= 0; MDRin <= 0;
 			end
 			ld7: begin
 				 MDRout <= 1; Gra <= 1; Rin <= 1;
-				 #25 MDRout <= 0; Gra <= 0; Rin <= 0;
+				 #20 MDRout <= 0; Gra <= 0; Rin <= 0;
 			end
 	/*===============================*/
 			ldi3: begin
 				 Grb <= 1; BAout <= 1; Yin <= 1;
-				 #25 Grb <= 0; BAout <= 0; Yin <= 0;
+				 #20 Grb <= 0; BAout <= 0; Yin <= 0;
 			end
 			ldi4: begin
 				 Cout <= 1; Zlowin <= 1;
-				 #25 Cout <= 0; Zlowin <= 0;
+				 #20 Cout <= 0; Zlowin <= 0;
 			end
 			ldi5: begin
 				 Zlowout <= 1; Gra <= 1; Rin <= 1;
-				 #25 Zlowout <= 0; Gra <= 0; Rin <= 0;
+				 #20 Zlowout <= 0; Gra <= 0; Rin <= 0;
 			end
 	/*===============================*/
 			st3: begin
 				 Grb <= 1; BAout <= 1; Yin <= 1;
-				 #25 Grb <= 0; BAout <= 0; Yin <= 0;
+				 #20 Grb <= 0; BAout <= 0; Yin <= 0;
 			end
 			st4: begin
 				 Cout <= 1; Zlowin <= 1;
-				 #25 Cout <= 0; Zlowin <= 0;
+				 #20 Cout <= 0; Zlowin <= 0;
 			end
 			st5: begin
 				 Zlowout <= 1; MARin <= 1;
-				 #25 Zlowout <= 0; MARin <= 0;
+				 #20 Zlowout <= 0; MARin <= 0;
 			end
 			st6: begin
 				 Rout <= 1; MDRin <= 1; Gra <= 1;
-				 #25 Rout <= 0; MDRin <= 0; Gra <= 0;
+				 #20 Rout <= 0; MDRin <= 0; Gra <= 0;
 			end
 			st7: begin
 				 MDRout <= 1; Write <= 1; 
-				 #25 MDRout <= 0; Write <= 0;
+				 #20 MDRout <= 0; Write <= 0;
 			end
 	/*===============================*/
 			br3: begin
 				 Gra <= 1; Rout <= 1; CONin <= 1;
-				 #25 Gra <= 0; Rout <= 0; CONin <= 0;
+				 #20 Gra <= 0; Rout <= 0; CONin <= 0;
 			end
 			br4: begin
 				 PCout <= 1; Yin <= 1;
-				 #25 PCout <= 0; Yin <= 0;
+				 #20 PCout <= 0; Yin <= 0;
 			end
 			br5: begin
 				 Cout <= 1; Zlowin <= 1; 
-				 #25 Cout <= 0; Zlowin <= 0; 
+				 #20 Cout <= 0; Zlowin <= 0; 
 			end
 			br6: begin
 				 Zlowout <= 1; PCin <= 1; 
-				 #25 Zlowout <= 0; PCin <= 0;
+				 #20 Zlowout <= 0; PCin <= 0;
 			end
 	/*===============================*/
 			_jr: begin
 				 Gra <= 1; Rout <= 1; PCin <= 1;
-				 #25 Gra <= 0; Rout <= 0; PCin <= 0;
+				 #20 Gra <= 0; Rout <= 0; PCin <= 0;
 			end
 	/*===============================*/
 			jal3: begin
 				 PCout <= 1; Zlowin <= 1;
-				 #25 PCout <= 0; Zlowin <= 0;
+				 #20 PCout <= 0; Zlowin <= 0;
 			end
 			jal4: begin
 				 Zlowout <= 1; JAL_flag <= 1;
-				 #25 Zlowout <= 0; JAL_flag <= 0;
+				 #20 Zlowout <= 0; JAL_flag <= 0;
 			end
 			jal5: begin
 				 Gra <= 1; Rout <= 1; PCin <= 1;
-				 #25 Gra <= 0; Rout <= 0; PCin <= 0;
+				 #20 Gra <= 0; Rout <= 0; PCin <= 0;
 			end
 	/*===============================*/
 			_in: begin
 				 Rin <= 1; InPortout <= 1; Gra <= 1;
-				 #25 Rin <= 0; InPortout <= 0; Gra <= 0;
+				 #20 Rin <= 0; InPortout <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			_out: begin
 				 Rout <= 1; OutPortin <= 1; Gra <= 1;
-				 #25 Rout <= 0; OutPortin <= 0; Gra <= 0;
+				 #20 Rout <= 0; OutPortin <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			_mfhi: begin
 				 Rin <= 1; HIout <= 1; Gra <= 1;
-				 #25 Rin <= 0; HIout <= 0; Gra <= 0;
+				 #20 Rin <= 0; HIout <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			_mflo: begin
 				 Rin <= 1; LOout <= 1; Gra <= 1;
-				 #25 Rin <= 0; LOout <= 0; Gra <= 0;
+				 #20 Rin <= 0; LOout <= 0; Gra <= 0;
 			end
 	/*===============================*/
 			_nop: begin

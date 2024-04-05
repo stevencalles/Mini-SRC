@@ -1,5 +1,5 @@
 Analysis & Elaboration report for CPUDesign
-Wed Apr 03 22:15:39 2024
+Thu Apr 04 23:42:58 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -9,19 +9,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: pc_register:PC
-  5. Parameter Settings for User Entity Instance: alu_32:alu
-  6. Parameter Settings for User Entity Instance: control_unit:control
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "control_unit:control"
-  9. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|add_32:add_32"
- 10. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32"
- 11. Port Connectivity Checks: "alu_32:alu|add_32:add_32"
- 12. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
- 13. Port Connectivity Checks: "register:inport"
- 14. Port Connectivity Checks: "register:MAR"
- 15. Analysis & Elaboration Messages
- 16. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: alu_32:alu
+  5. Analysis & Elaboration Settings
+  6. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|add_32:add_32"
+  7. Port Connectivity Checks: "alu_32:alu|sub_32:sub_32"
+  8. Port Connectivity Checks: "alu_32:alu|add_32:add_32"
+  9. Port Connectivity Checks: "encoder_32_5:encoder_32_5"
+ 10. Port Connectivity Checks: "register:inport"
+ 11. Port Connectivity Checks: "register:MAR"
+ 12. Analysis & Elaboration Messages
+ 13. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -47,7 +44,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Apr 03 22:15:39 2024       ;
+; Analysis & Elaboration Status ; Successful - Thu Apr 04 23:42:58 2024       ;
 ; Quartus Prime Version         ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                 ; CPUDesign                                   ;
 ; Top-level Entity Name         ; Datapath                                    ;
@@ -76,16 +73,6 @@ refer to the applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
-
-
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pc_register:PC         ;
-+----------------+----------------------------------+-----------------+
-; Parameter Name ; Value                            ; Type            ;
-+----------------+----------------------------------+-----------------+
-; INIT           ; 00000000000000000000000000000000 ; Unsigned Binary ;
-+----------------+----------------------------------+-----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------+
@@ -120,122 +107,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Neg            ; 10001 ; Unsigned Binary                ;
 ; Not            ; 10010 ; Unsigned Binary                ;
 +----------------+-------+--------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: control_unit:control ;
-+----------------+---------+----------------------------------------+
-; Parameter Name ; Value   ; Type                                   ;
-+----------------+---------+----------------------------------------+
-; Load           ; 00000   ; Unsigned Binary                        ;
-; Loadi          ; 00001   ; Unsigned Binary                        ;
-; Store          ; 00010   ; Unsigned Binary                        ;
-; Addi           ; 01100   ; Unsigned Binary                        ;
-; Andi           ; 01101   ; Unsigned Binary                        ;
-; Ori            ; 01110   ; Unsigned Binary                        ;
-; Branch         ; 10011   ; Unsigned Binary                        ;
-; Jr             ; 10100   ; Unsigned Binary                        ;
-; Jal            ; 10101   ; Unsigned Binary                        ;
-; In             ; 10110   ; Unsigned Binary                        ;
-; Out            ; 10111   ; Unsigned Binary                        ;
-; Mfhi           ; 11000   ; Unsigned Binary                        ;
-; Mflo           ; 11001   ; Unsigned Binary                        ;
-; Add            ; 00011   ; Unsigned Binary                        ;
-; Sub            ; 00100   ; Unsigned Binary                        ;
-; Shr            ; 00101   ; Unsigned Binary                        ;
-; Shra           ; 00110   ; Unsigned Binary                        ;
-; Shl            ; 00111   ; Unsigned Binary                        ;
-; Ror            ; 01000   ; Unsigned Binary                        ;
-; Rol            ; 01001   ; Unsigned Binary                        ;
-; And            ; 01010   ; Unsigned Binary                        ;
-; Or             ; 01011   ; Unsigned Binary                        ;
-; Div            ; 10000   ; Unsigned Binary                        ;
-; Mul            ; 01111   ; Unsigned Binary                        ;
-; Neg            ; 10001   ; Unsigned Binary                        ;
-; Not            ; 10010   ; Unsigned Binary                        ;
-; Nop            ; 11010   ; Unsigned Binary                        ;
-; Halt           ; 11011   ; Unsigned Binary                        ;
-; Reset_state    ; 0000000 ; Unsigned Binary                        ;
-; T0             ; 0000001 ; Unsigned Binary                        ;
-; T1             ; 0000010 ; Unsigned Binary                        ;
-; T2             ; 0000011 ; Unsigned Binary                        ;
-; add3           ; 0000100 ; Unsigned Binary                        ;
-; add4           ; 0000101 ; Unsigned Binary                        ;
-; add5           ; 0000110 ; Unsigned Binary                        ;
-; sub3           ; 0000111 ; Unsigned Binary                        ;
-; sub4           ; 0001000 ; Unsigned Binary                        ;
-; sub5           ; 0001001 ; Unsigned Binary                        ;
-; mul3           ; 0001010 ; Unsigned Binary                        ;
-; mul4           ; 0001011 ; Unsigned Binary                        ;
-; mul5           ; 0001100 ; Unsigned Binary                        ;
-; mul6           ; 0001101 ; Unsigned Binary                        ;
-; div3           ; 0001110 ; Unsigned Binary                        ;
-; div4           ; 0001111 ; Unsigned Binary                        ;
-; div5           ; 0010000 ; Unsigned Binary                        ;
-; div6           ; 0010001 ; Unsigned Binary                        ;
-; and3           ; 0010010 ; Unsigned Binary                        ;
-; and4           ; 0010011 ; Unsigned Binary                        ;
-; and5           ; 0010100 ; Unsigned Binary                        ;
-; or3            ; 0010101 ; Unsigned Binary                        ;
-; or4            ; 0010110 ; Unsigned Binary                        ;
-; or5            ; 0010111 ; Unsigned Binary                        ;
-; shl3           ; 0011000 ; Unsigned Binary                        ;
-; shl4           ; 0011001 ; Unsigned Binary                        ;
-; shl5           ; 0011010 ; Unsigned Binary                        ;
-; shr3           ; 0011011 ; Unsigned Binary                        ;
-; shr4           ; 0011100 ; Unsigned Binary                        ;
-; shr5           ; 0011101 ; Unsigned Binary                        ;
-; rol3           ; 0011110 ; Unsigned Binary                        ;
-; rol4           ; 0011111 ; Unsigned Binary                        ;
-; rol5           ; 0100000 ; Unsigned Binary                        ;
-; ror3           ; 0100001 ; Unsigned Binary                        ;
-; ror4           ; 0100010 ; Unsigned Binary                        ;
-; ror5           ; 0100011 ; Unsigned Binary                        ;
-; neg3           ; 0100100 ; Unsigned Binary                        ;
-; neg4           ; 0100101 ; Unsigned Binary                        ;
-; not3           ; 0100110 ; Unsigned Binary                        ;
-; not4           ; 0100111 ; Unsigned Binary                        ;
-; shra3          ; 0101000 ; Unsigned Binary                        ;
-; shra4          ; 0101001 ; Unsigned Binary                        ;
-; shra5          ; 0101010 ; Unsigned Binary                        ;
-; ld3            ; 0101011 ; Unsigned Binary                        ;
-; ld4            ; 0101100 ; Unsigned Binary                        ;
-; ld5            ; 0101101 ; Unsigned Binary                        ;
-; ld6            ; 0101110 ; Unsigned Binary                        ;
-; ld7            ; 0101111 ; Unsigned Binary                        ;
-; ldi3           ; 0110000 ; Unsigned Binary                        ;
-; ldi4           ; 0110001 ; Unsigned Binary                        ;
-; ldi5           ; 0110010 ; Unsigned Binary                        ;
-; st3            ; 0110011 ; Unsigned Binary                        ;
-; st4            ; 0110100 ; Unsigned Binary                        ;
-; st5            ; 0110101 ; Unsigned Binary                        ;
-; st6            ; 0110110 ; Unsigned Binary                        ;
-; st7            ; 0110111 ; Unsigned Binary                        ;
-; addi3          ; 0111000 ; Unsigned Binary                        ;
-; addi4          ; 0111001 ; Unsigned Binary                        ;
-; addi5          ; 0111010 ; Unsigned Binary                        ;
-; andi3          ; 0111011 ; Unsigned Binary                        ;
-; andi4          ; 0111100 ; Unsigned Binary                        ;
-; andi5          ; 0111101 ; Unsigned Binary                        ;
-; ori3           ; 0111110 ; Unsigned Binary                        ;
-; ori4           ; 0111111 ; Unsigned Binary                        ;
-; ori5           ; 1000000 ; Unsigned Binary                        ;
-; br3            ; 1000001 ; Unsigned Binary                        ;
-; br4            ; 1000010 ; Unsigned Binary                        ;
-; br5            ; 1000011 ; Unsigned Binary                        ;
-; br6            ; 1000100 ; Unsigned Binary                        ;
-; _jr            ; 1000101 ; Unsigned Binary                        ;
-; jal3           ; 1000110 ; Unsigned Binary                        ;
-; jal4           ; 1000111 ; Unsigned Binary                        ;
-; jal5           ; 1001000 ; Unsigned Binary                        ;
-; _in            ; 1001001 ; Unsigned Binary                        ;
-; _out           ; 1001010 ; Unsigned Binary                        ;
-; _mfhi          ; 1001011 ; Unsigned Binary                        ;
-; _mflo          ; 1001100 ; Unsigned Binary                        ;
-; _nop           ; 1001101 ; Unsigned Binary                        ;
-; _halt          ; 1001110 ; Unsigned Binary                        ;
-+----------------+---------+----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -326,17 +197,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "control_unit:control"                                                                     ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Run        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; InPortin   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; OutPortout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "alu_32:alu|sub_32:sub_32|switch_to_neg_32:switch_to_neg_32|add_32:add_32"               ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -402,7 +262,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 03 22:15:28 2024
+    Info: Processing started: Thu Apr 04 23:42:46 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPUDesign -c CPUDesign --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -519,20 +379,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
 Info (12021): Found 1 design units, including 1 entities, in source file control_tb.v
     Info (12023): Found entity 1: control_tb File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_tb.v Line: 2
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
-Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 39
-Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 61
-Info (12128): Elaborating entity "registerMDR" for hierarchy "registerMDR:MDR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 62
+Info (12128): Elaborating entity "register" for hierarchy "register:R0" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 49
+Info (12128): Elaborating entity "pc_register" for hierarchy "pc_register:PC" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 71
+Info (12128): Elaborating entity "registerMDR" for hierarchy "registerMDR:MDR" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 72
 Info (12128): Elaborating entity "mux_2_1" for hierarchy "registerMDR:MDR|mux_2_1:MDMux" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/register.v Line: 22
-Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:encoder_32_5" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 87
+Info (12128): Elaborating entity "encoder_32_5" for hierarchy "encoder_32_5:encoder_32_5" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 97
 Warning (10762): Verilog HDL Case Statement warning at encoder_32_to_5.v(6): can't check case statement for completeness because the case expression has too many possible states File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
 Info (10264): Verilog HDL Case Statement information at encoder_32_to_5.v(6): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/encoder_32_to_5.v Line: 6
-Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:select_encode_logic" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 89
+Info (12128): Elaborating entity "select_encode_logic" for hierarchy "select_encode_logic:select_encode_logic" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 99
 Info (12128): Elaborating entity "decoder_4_to_16" for hierarchy "select_encode_logic:select_encode_logic|decoder_4_to_16:decode4to16" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/select_encode_logic.v Line: 11
-Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:con_ff" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 91
+Info (12128): Elaborating entity "con_ff" for hierarchy "con_ff:con_ff" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 101
 Info (12128): Elaborating entity "decoder_2_to_4" for hierarchy "con_ff:con_ff|decoder_2_to_4:dec_2to4" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 16
 Info (12128): Elaborating entity "d_flip_flop" for hierarchy "con_ff:con_ff|d_flip_flop:CON_d_ff" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/con_ff.v Line: 20
 Warning (10235): Verilog HDL Always Construct warning at d_flip_flop.v(9): variable "D" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/d_flip_flop.v Line: 9
-Info (12128): Elaborating entity "alu_32" for hierarchy "alu_32:alu" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 93
+Info (12128): Elaborating entity "alu_32" for hierarchy "alu_32:alu" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 103
 Warning (10858): Verilog HDL warning at alu_32.v(30): object IncPC_out used but never assigned File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 30
 Warning (10030): Net "IncPC_out" at alu_32.v(30) has no driver or initial value, using a default initial value '0' File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 30
 Info (12128): Elaborating entity "add_32" for hierarchy "alu_32:alu|add_32:add_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 34
@@ -555,161 +415,13 @@ Warning (10199): Verilog HDL Case Statement warning at mul_32.v(31): case item e
 Warning (10235): Verilog HDL Always Construct warning at mul_32.v(28): variable "a_2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/mul_32.v Line: 28
 Info (12128): Elaborating entity "div_32" for hierarchy "alu_32:alu|div_32:div_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 44
 Info (12128): Elaborating entity "or_32" for hierarchy "alu_32:alu|or_32:or_32" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/alu_32.v Line: 45
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 95
-Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 103
-Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:control" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 108
-Warning (10270): Verilog HDL Case Statement warning at control_unit.v(43): incomplete case statement has no default case item File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 43
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(34): inferring latch(es) for variable "Present_state", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Warning (10270): Verilog HDL Case Statement warning at control_unit.v(181): incomplete case statement has no default case item File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 181
-Info (10264): Verilog HDL Case Statement information at control_unit.v(181): all case item expressions in this case statement are onehot File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 181
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "PCout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Zlowout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Zhighout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "MDRout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "InPortout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "HIout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "LOout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "PCin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Zlowin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Zhighin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "MDRin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "InPortin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "OutPortin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "HIin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "LOin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Yin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "CONin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "OutPortout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "IncPC", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Read", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Write", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Cout", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "JAL_flag", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Warning (10240): Verilog HDL Always Construct warning at control_unit.v(180): inferring latch(es) for variable "Run", which holds its previous value in one or more paths through the always construct File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Run" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "JAL_flag" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Cout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Write" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Read" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "IncPC" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "OutPortout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Rout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Rin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "CONin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Grc" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Grb" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Gra" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Yin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "IRin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "LOin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "HIin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "OutPortin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "InPortin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "MARin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "MDRin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Zhighin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Zlowin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "PCin" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "BAout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "LOout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "HIout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "InPortout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "MDRout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Zhighout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Zlowout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "PCout" at control_unit.v(180) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 180
-Info (10041): Inferred latch for "Present_state._halt" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._nop" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._mflo" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._mfhi" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._out" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._in" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.jal5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.jal4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.jal3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state._jr" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.br6" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.br5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.br4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.br3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ori5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ori4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ori3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.andi5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.andi4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.andi3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.addi5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.addi4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.addi3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.st7" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.st6" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.st5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.st4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.st3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ldi5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ldi4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ldi3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ld7" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ld6" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ld5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ld4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ld3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shra5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shra4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shra3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.not4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.not3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.neg4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.neg3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ror5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ror4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.ror3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.rol5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.rol4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.rol3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shr5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shr4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shr3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shl5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shl4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.shl3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.or5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.or4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.or3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.and5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.and4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.and3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.div6" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.div5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.div4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.div3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.mul6" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.mul5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.mul4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.mul3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.sub5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.sub4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.sub3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.add5" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.add4" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.add3" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.T2" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.T1" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.T0" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
-Info (10041): Inferred latch for "Present_state.Reset_state" at control_unit.v(34) File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/control_unit.v Line: 34
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 105
+Info (12128): Elaborating entity "Bus" for hierarchy "Bus:bus" File: C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/Datapath.v Line: 113
 Info (144001): Generated suppressed messages file C:/Users/steve/OneDrive/Desktop/eng_stuff/FOURTH_YEAR/ELEC374/mini-SRC/output_files/CPUDesign.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Wed Apr 03 22:15:39 2024
-    Info: Elapsed time: 00:00:11
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4788 megabytes
+    Info: Processing ended: Thu Apr 04 23:42:58 2024
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:10
 
 
